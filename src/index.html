@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sistem Informasi Administrasi Padukuhan Ngentak Poncosari - Dashboard data penduduk dan pemetaan wilayah" />
+  <meta name="theme-color" content="#1d6f3c" />
+
+  <!-- Title -->
+  <title>Administrasi Padukuhan Ngentak</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+  <!-- Hero Header -->
+  <header class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">Sistem Informasi Administrasi</p>
+      <h1>Padukuhan Ngentak Poncosari</h1>
+      <p class="subtitle">
+        Dashboard utama untuk melihat data penduduk, profil padukuhan, kategori RT,
+        dan peta wilayah administrasi.
+      </p>
+      <div class="hero__badges">
+        <span>6 RT</span>
+        <span>Wilayah Terintegrasi</span>
+        <span>Profil KKN siap dikembangkan</span>
+      </div>
+    </div>
+    <div class="hero__stats" id="top-summary"></div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Section 1: Profile Padukuhan -->
+    <section class="section profile-layout" id="profil-padukuhan">
+      <article class="panel profile-card">
+        <p class="eyebrow">Profil Padukuhan</p>
+        <h2>Padukuhan Ngentak</h2>
+        <p>
+          Padukuhan Ngentak merupakan bagian dari wilayah Poncosari yang memiliki
+          karakter sosial, agraris, dan potensi wisata alam yang perlu dikelola
+          secara administrasi dan dokumentasi digital.
+        </p>
+        <ul>
+          <li>Aktivitas utama: pertanian, peternakan, dan usaha lokal.</li>
+          <li>Wilayah administrasi: terbagi dalam 6 RT.</li>
+          <li>Potensi pengembangan: data penduduk, pemetaan wilayah, dan wisata.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Section 2: Peta Wilayah -->
+    <section class="section" id="peta">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Peta Wilayah</p>
+          <h2>Peta Dusun Ngentak</h2>
+        </div>
+      </div>
+
+      <div class="map-layout">
+        <!-- Map Visualization -->
+        <div class="panel map-card">
+          <div class="map-card__title">
+            <span class="map-badge">Sketsa Wilayah</span>
+            <small>Representasi visual batas RT, sawah, peternakan, dan objek wisata.</small>
+          </div>
+          <div class="map-card__image">
+            <img src="./map.jpg" alt="Peta wilayah Dusun Ngentak" class="map-image" />
+          </div>
+          <p class="map-image-note">Peta wilayah Dusun Ngentak</p>
+        </div>
+
+        <!-- Map Legend -->
+        <div class="panel legend-card">
+          <h3>Legenda Peta</h3>
+          <ul>
+            <li><span class="legend-dot rt-1"></span> RT 01</li>
+            <li><span class="legend-dot rt-2"></span> RT 02</li>
+            <li><span class="legend-dot rt-3"></span> RT 03</li>
+            <li><span class="legend-dot rt-4"></span> RT 04</li>
+            <li><span class="legend-dot rt-5"></span> RT 05</li>
+            <li><span class="legend-dot rt-6"></span> RT 06</li>
+            <li><span class="legend-dot sawah"></span> Sawah</li>
+            <li><span class="legend-dot ternak"></span> Peternakan</li>
+            <li><span class="legend-dot wisata"></span> Objek Wisata</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Data Kependudukan -->
+    <section class="section" id="penduduk">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Data Kependudukan</p>
+          <h2>Informasi Penduduk</h2>
+        </div>
+      </div>
+
+      <div class="chart-grid">
+        <!-- Gender Chart -->
+        <article class="panel">
+          <h3>Jenis Kelamin</h3>
+          <div id="gender-chart" class="bars"></div>
+        </article>
+
+        <!-- Age Category Chart -->
+        <article class="panel">
+          <h3>Kategori Umur</h3>
+          <div id="age-chart" class="bars"></div>
+        </article>
+
+        <!-- Occupation Chart -->
+        <article class="panel">
+          <h3>Pekerjaan</h3>
+          <div id="occupation-chart" class="bars"></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 4: Kategori per RT -->
+    <section class="section" id="rt">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Pembagian Wilayah</p>
+          <h2>Kategori per RT</h2>
+        </div>
+      </div>
+      
+      <!-- RT Cards Grid -->
+      <div id="rt-cards" class="rt-grid"></div>
+      
+      <!-- RT Detail Panel -->
+      <div class="panel rt-detail-panel">
+        <p class="eyebrow">Detail RT Terpilih</p>
+        <div id="rt-focus-summary" class="focus-summary"></div>
+      </div>
+    </section>
+
+    <!-- Section 5: Profil KKN -->
+    <section class="section profile-layout" id="profil-kkn">
+      <article class="panel profile-card profile-card--muted">
+        <p class="eyebrow">Profil KKN</p>
+        <h2>Profil Aku KKN</h2>
+        <p>
+          Bagian ini bisa diisi nanti saat data profil KKN sudah tersedia.
+          Placeholder ini dibuat agar struktur profil tetap siap digunakan.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Website administrasi Padukuhan Ngentak Poncosari — versi awal untuk data dan visualisasi wilayah.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
