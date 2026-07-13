@@ -306,6 +306,7 @@ main {
 
 .map-card {
   overflow: hidden;
+  background: linear-gradient(180deg, #fcfdf9 0%, #f6faef 100%);
 }
 
 .map-card__title {
@@ -333,41 +334,110 @@ main {
   color: var(--muted);
 }
 
-.map-svg {
+.map-card__image {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #edf6e7;
+  border: 1px solid #dbe6d3;
+}
+
+.map-image {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 12px;
-  background: linear-gradient(180deg, #f9fbf7, #eaf4e2);
+}
+
+.map-image-note {
+  margin-top: 10px;
+  font-size: 0.88rem;
+  color: var(--muted);
 }
 
 .map-name {
   fill: #13331c;
-  font-size: 23px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
 }
 
 .map-name-sub {
   fill: #43614c;
   font-size: 12px;
   font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.road-layer .road {
+.feature-area {
+  opacity: 0.85;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
+}
+
+.feature-sawah {
+  fill: #cce8bb;
+  stroke: #7db66c;
+  stroke-width: 1.2;
+}
+
+.feature-peternakan {
+  fill: #d5edc6;
+  stroke: #5f9d4a;
+  stroke-width: 1.5;
+}
+
+.feature-wisata {
+  fill: #ffe6b0;
+  stroke: #dda855;
+  stroke-width: 1.5;
+}
+
+.text-tag {
+  fill: #4b604c;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.road-main {
   fill: none;
+  stroke: #7f8b83;
+  stroke-width: 10;
+  opacity: 0.8;
   stroke-linecap: round;
+}
+
+.road-side {
+  fill: none;
+  stroke: #9ca59e;
+  stroke-width: 6;
+  opacity: 0.68;
+  stroke-linecap: round;
+}
+
+.road-branch {
+  fill: none;
+  stroke: #8d968f;
+  stroke-width: 5;
+  opacity: 0.6;
+  stroke-linecap: round;
+}
+
+.road-label {
+  fill: #6b766d;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .road-main {
   stroke: #7f8b83;
   stroke-width: 9;
-  opacity: 0.7;
+  opacity: 0.72;
 }
 
 .road-side {
   stroke: #9ca59e;
   stroke-width: 6;
-  opacity: 0.65;
+  opacity: 0.68;
 }
 
 .road-branch {
@@ -394,10 +464,36 @@ main {
   stroke-width: 1.2;
 }
 
+.house-block--main {
+  fill: #efd19d;
+}
+
+.map-hill {
+  opacity: 0.75;
+  filter: drop-shadow(0 2px 3px rgba(22, 59, 34, 0.12));
+}
+
+.hill-a {
+  fill: #cfe0b9;
+}
+
+.hill-b {
+  fill: #b8d3a8;
+}
+
+.map-river {
+  fill: none;
+  stroke: #8fc3c7;
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: 0.8;
+}
+
 .label {
   fill: #163b22;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
 }
 
 .small-label {
@@ -408,27 +504,50 @@ main {
 
 .rt-shape {
   stroke: #24482f;
-  stroke-width: 2;
+  stroke-width: 2.2;
   opacity: 0.95;
+  stroke-linejoin: round;
   transition: opacity 0.2s ease, transform 0.2s ease, stroke-width 0.2s ease;
+  cursor: pointer;
+}
+
+.rt-shape:hover {
+  transform: translateY(-1px);
 }
 
 .rt-shape.is-dim {
-  opacity: 0.25;
+  opacity: 0.24;
 }
 
 .rt-shape.is-active {
   stroke: #0f4f2a;
-  stroke-width: 4;
+  stroke-width: 4.2;
   filter: drop-shadow(0 4px 8px rgba(18, 62, 32, 0.25));
 }
 
-.rt-1 { fill: #ddeecf; }
-.rt-2 { fill: #cbe7c7; }
-.rt-3 { fill: #bfdcb9; }
-.rt-4 { fill: #e5f2d8; }
-.rt-5 { fill: #d5ebcf; }
-.rt-6 { fill: #c6e1c1; }
+.rt-1 {
+  fill: #ddeecf;
+}
+
+.rt-2 {
+  fill: #cbe7c7;
+}
+
+.rt-3 {
+  fill: #bfdcb9;
+}
+
+.rt-4 {
+  fill: #e5f2d8;
+}
+
+.rt-5 {
+  fill: #d5ebcf;
+}
+
+.rt-6 {
+  fill: #c6e1c1;
+}
 
 .legend-card {
   position: sticky;
@@ -463,15 +582,41 @@ main {
   border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.legend-dot.rt-1 { background: #dff1da; }
-.legend-dot.rt-2 { background: #c9e8ce; }
-.legend-dot.rt-3 { background: #b6dfbe; }
-.legend-dot.rt-4 { background: #e5f3da; }
-.legend-dot.rt-5 { background: #d0e9cd; }
-.legend-dot.rt-6 { background: #c0dfc2; }
-.legend-dot.sawah { background: #8fd38a; }
-.legend-dot.ternak { background: #d9c66a; }
-.legend-dot.wisata { background: #ffe3a3; }
+.legend-dot.rt-1 {
+  background: #dff1da;
+}
+
+.legend-dot.rt-2 {
+  background: #c9e8ce;
+}
+
+.legend-dot.rt-3 {
+  background: #b6dfbe;
+}
+
+.legend-dot.rt-4 {
+  background: #e5f3da;
+}
+
+.legend-dot.rt-5 {
+  background: #d0e9cd;
+}
+
+.legend-dot.rt-6 {
+  background: #c0dfc2;
+}
+
+.legend-dot.sawah {
+  background: #8fd38a;
+}
+
+.legend-dot.ternak {
+  background: #d9c66a;
+}
+
+.legend-dot.wisata {
+  background: #ffe3a3;
+}
 
 .footer {
   text-align: center;

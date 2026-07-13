@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" preserveAspectRatio="xMidYMid meet">
+  <rect width="900" height="520" rx="28" fill="#eef4e7" />
+  <rect x="30" y="30" width="840" height="460" rx="24" fill="#ffffff" stroke="#d4e3d3" stroke-width="4" />
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M120 120 C200 90 260 110 320 128" stroke="#7b9b6b" stroke-width="18" opacity="0.6" />
+    <path d="M140 240 C220 220 280 245 340 268" stroke="#74a478" stroke-width="18" opacity="0.55" />
+    <path d="M520 104 C590 90 650 112 720 122" stroke="#6e8768" stroke-width="16" opacity="0.7" />
+    <path d="M520 360 C590 344 650 370 720 382" stroke="#6e8768" stroke-width="16" opacity="0.7" />
+    <path d="M180 360 C250 320 320 335 390 360" stroke="#b89d4f" stroke-width="14" opacity="0.6" />
+    <path d="M540 140 C600 135 660 145 720 150" stroke="#e4b05b" stroke-width="14" opacity="0.6" />
+    <path d="M150 180 C210 170 280 190 340 198" stroke="#5d9c81" stroke-width="14" opacity="0.65" />
+  </g>
+  <g fill="#2f4f30" font-family="Arial, sans-serif" font-weight="700">
+    <text x="80" y="86" font-size="32">Peta Dusun Ngentak</text>
+    <text x="80" y="118" font-size="16" fill="#60765f">Ganti file ini dengan peta asli Anda</text>
+  </g>
+  <rect x="90" y="320" width="170" height="90" rx="16" fill="#d2ebc7" opacity="0.8" />
+  <text x="110" y="360" fill="#2f4f30" font-family="Arial, sans-serif" font-size="18" font-weight="700">RT 01</text>
+  <text x="120" y="390" fill="#2f4f30" font-family="Arial, sans-serif" font-size="14">Budidaya sawah</text>
+  <rect x="530" y="130" width="170" height="90" rx="16" fill="#f8df9b" opacity="0.8" />
+  <text x="550" y="170" fill="#5f5b30" font-family="Arial, sans-serif" font-size="18" font-weight="700">PT. Tambak</text>
+  <text x="550" y="198" fill="#5f5b30" font-family="Arial, sans-serif" font-size="14">Area pantai</text>
+</svg>

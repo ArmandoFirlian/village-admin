@@ -277,16 +277,16 @@ function renderRtFocusSummary() {
         <h4>Pekerjaan</h4>
         <ul>
           ${selected.occupations
-            .map((job) => `<li><span>${job.label}</span><strong>${job.value}</strong></li>`)
-            .join('')}
+      .map((job) => `<li><span>${job.label}</span><strong>${job.value}</strong></li>`)
+      .join('')}
         </ul>
       </div>
       <div class="focus-list">
         <h4>Kategori Umur</h4>
         <ul>
           ${selected.ageCategories
-            .map((age) => `<li><span>${age.label}</span><strong>${age.value}</strong></li>`)
-            .join('')}
+      .map((age) => `<li><span>${age.label}</span><strong>${age.value}</strong></li>`)
+      .join('')}
         </ul>
       </div>
     </div>
@@ -301,6 +301,17 @@ function updateMapFocus() {
   });
 }
 
+function bindMapInteractions() {
+  document.querySelectorAll('.rt-shape').forEach((shape) => {
+    shape.addEventListener('click', () => {
+      dashboardData.activeRt = shape.dataset.rt;
+      renderRtCards();
+      renderRtFocusSummary();
+      updateMapFocus();
+    });
+  });
+}
+
 renderSummary();
 renderBarChart('gender-chart', [
   { label: 'Pria', value: dashboardData.pria },
@@ -311,3 +322,4 @@ renderBarChart('occupation-chart', dashboardData.occupations);
 renderRtCards();
 renderRtFocusSummary();
 updateMapFocus();
+bindMapInteractions();
