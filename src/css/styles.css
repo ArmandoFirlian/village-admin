@@ -15,6 +15,7 @@
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -25,6 +26,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -36,6 +38,7 @@
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -47,6 +50,7 @@
         opacity: 0;
         transform: translateX(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -58,6 +62,7 @@
         opacity: 0;
         transform: translateX(30px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -69,6 +74,7 @@
         opacity: 0;
         transform: scale(0.95);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -76,27 +82,36 @@
 }
 
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.7;
     }
 }
 
 @keyframes bounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }
 }
 
 @keyframes glow {
-    0%, 100% {
+
+    0%,
+    100% {
         box-shadow: 0 0 5px rgba(29, 111, 60, 0.3);
     }
+
     50% {
         box-shadow: 0 0 20px rgba(29, 111, 60, 0.6);
     }
@@ -106,6 +121,7 @@
     from {
         width: 0;
     }
+
     to {
         width: var(--bar-width);
     }
@@ -115,6 +131,7 @@
     0% {
         background-position: -1000px 0;
     }
+
     100% {
         background-position: 1000px 0;
     }
@@ -187,9 +204,17 @@ h1 {
     animation: slideUp 0.6s ease-out both;
 }
 
-.hero__badges span:nth-child(1) { animation-delay: 0.1s; }
-.hero__badges span:nth-child(2) { animation-delay: 0.2s; }
-.hero__badges span:nth-child(3) { animation-delay: 0.3s; }
+.hero__badges span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.hero__badges span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.hero__badges span:nth-child(3) {
+    animation-delay: 0.3s;
+}
 
 .hero__stats {
     max-width: 1100px;
@@ -214,10 +239,21 @@ h1 {
     box-shadow: 0 12px 30px rgba(255, 255, 255, 0.2);
 }
 
-.stat-card:nth-child(1) { animation-delay: 0.4s; }
-.stat-card:nth-child(2) { animation-delay: 0.5s; }
-.stat-card:nth-child(3) { animation-delay: 0.6s; }
-.stat-card:nth-child(4) { animation-delay: 0.7s; }
+.stat-card:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+.stat-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.stat-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.stat-card:nth-child(4) {
+    animation-delay: 0.7s;
+}
 
 /* ==================== Main Content ==================== */
 
@@ -232,11 +268,25 @@ main {
     animation: slideUp 0.8s ease-out;
 }
 
-.section:nth-of-type(1) { animation-delay: 0.2s; }
-.section:nth-of-type(2) { animation-delay: 0.3s; }
-.section:nth-of-type(3) { animation-delay: 0.4s; }
-.section:nth-of-type(4) { animation-delay: 0.5s; }
-.section:nth-of-type(5) { animation-delay: 0.6s; }
+.section:nth-of-type(1) {
+    animation-delay: 0.2s;
+}
+
+.section:nth-of-type(2) {
+    animation-delay: 0.3s;
+}
+
+.section:nth-of-type(3) {
+    animation-delay: 0.4s;
+}
+
+.section:nth-of-type(4) {
+    animation-delay: 0.5s;
+}
+
+.section:nth-of-type(5) {
+    animation-delay: 0.6s;
+}
 
 .section-heading {
     display: flex;
@@ -290,14 +340,37 @@ main {
     animation: slideInLeft 0.5s ease-out both;
 }
 
-.bar-row:nth-child(1) { animation-delay: 0.1s; }
-.bar-row:nth-child(2) { animation-delay: 0.2s; }
-.bar-row:nth-child(3) { animation-delay: 0.3s; }
-.bar-row:nth-child(4) { animation-delay: 0.4s; }
-.bar-row:nth-child(5) { animation-delay: 0.5s; }
-.bar-row:nth-child(6) { animation-delay: 0.6s; }
-.bar-row:nth-child(7) { animation-delay: 0.7s; }
-.bar-row:nth-child(8) { animation-delay: 0.8s; }
+.bar-row:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.bar-row:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.bar-row:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.bar-row:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.bar-row:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.bar-row:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.bar-row:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.bar-row:nth-child(8) {
+    animation-delay: 0.8s;
+}
 
 .bar-label {
     font-size: 0.9rem;
@@ -319,14 +392,37 @@ main {
     animation: barFill 1s ease-out both;
 }
 
-.bar-row:nth-child(1) .bar-fill { animation-delay: 0.1s; }
-.bar-row:nth-child(2) .bar-fill { animation-delay: 0.2s; }
-.bar-row:nth-child(3) .bar-fill { animation-delay: 0.3s; }
-.bar-row:nth-child(4) .bar-fill { animation-delay: 0.4s; }
-.bar-row:nth-child(5) .bar-fill { animation-delay: 0.5s; }
-.bar-row:nth-child(6) .bar-fill { animation-delay: 0.6s; }
-.bar-row:nth-child(7) .bar-fill { animation-delay: 0.7s; }
-.bar-row:nth-child(8) .bar-fill { animation-delay: 0.8s; }
+.bar-row:nth-child(1) .bar-fill {
+    animation-delay: 0.1s;
+}
+
+.bar-row:nth-child(2) .bar-fill {
+    animation-delay: 0.2s;
+}
+
+.bar-row:nth-child(3) .bar-fill {
+    animation-delay: 0.3s;
+}
+
+.bar-row:nth-child(4) .bar-fill {
+    animation-delay: 0.4s;
+}
+
+.bar-row:nth-child(5) .bar-fill {
+    animation-delay: 0.5s;
+}
+
+.bar-row:nth-child(6) .bar-fill {
+    animation-delay: 0.6s;
+}
+
+.bar-row:nth-child(7) .bar-fill {
+    animation-delay: 0.7s;
+}
+
+.bar-row:nth-child(8) .bar-fill {
+    animation-delay: 0.8s;
+}
 
 .bar-value {
     text-align: right;
@@ -357,12 +453,29 @@ main {
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.rt-card:nth-child(1) { animation-delay: 0.1s; }
-.rt-card:nth-child(2) { animation-delay: 0.2s; }
-.rt-card:nth-child(3) { animation-delay: 0.3s; }
-.rt-card:nth-child(4) { animation-delay: 0.4s; }
-.rt-card:nth-child(5) { animation-delay: 0.5s; }
-.rt-card:nth-child(6) { animation-delay: 0.6s; }
+.rt-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.rt-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.rt-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.rt-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.rt-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.rt-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
 
 .rt-card:hover {
     transform: translateY(-5px) scale(1.02);
@@ -425,9 +538,17 @@ main {
     transform: translateY(-2px);
 }
 
-.focus-metric:nth-child(1) { animation-delay: 0.1s; }
-.focus-metric:nth-child(2) { animation-delay: 0.2s; }
-.focus-metric:nth-child(3) { animation-delay: 0.3s; }
+.focus-metric:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.focus-metric:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.focus-metric:nth-child(3) {
+    animation-delay: 0.3s;
+}
 
 .focus-metric strong {
     display: block;
@@ -456,8 +577,13 @@ main {
     box-shadow: 0 5px 15px rgba(29, 111, 60, 0.1);
 }
 
-.focus-list:nth-child(1) { animation-delay: 0.2s; }
-.focus-list:nth-child(2) { animation-delay: 0.3s; }
+.focus-list:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.focus-list:nth-child(2) {
+    animation-delay: 0.3s;
+}
 
 .focus-list h4 {
     margin: 0 0 10px;
@@ -586,15 +712,41 @@ main {
     transform: translateX(5px);
 }
 
-.legend-card li:nth-child(1) { animation-delay: 0.1s; }
-.legend-card li:nth-child(2) { animation-delay: 0.15s; }
-.legend-card li:nth-child(3) { animation-delay: 0.2s; }
-.legend-card li:nth-child(4) { animation-delay: 0.25s; }
-.legend-card li:nth-child(5) { animation-delay: 0.3s; }
-.legend-card li:nth-child(6) { animation-delay: 0.35s; }
-.legend-card li:nth-child(7) { animation-delay: 0.4s; }
-.legend-card li:nth-child(8) { animation-delay: 0.45s; }
-.legend-card li:nth-child(9) { animation-delay: 0.5s; }
+.legend-card li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.legend-card li:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.legend-card li:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.legend-card li:nth-child(4) {
+    animation-delay: 0.25s;
+}
+
+.legend-card li:nth-child(5) {
+    animation-delay: 0.3s;
+}
+
+.legend-card li:nth-child(6) {
+    animation-delay: 0.35s;
+}
+
+.legend-card li:nth-child(7) {
+    animation-delay: 0.4s;
+}
+
+.legend-card li:nth-child(8) {
+    animation-delay: 0.45s;
+}
+
+.legend-card li:nth-child(9) {
+    animation-delay: 0.5s;
+}
 
 .legend-card li:last-child {
     border-bottom: 0;
