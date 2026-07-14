@@ -306,130 +306,103 @@ main {
     gap: 18px;
 }
 
-.chart-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+.chart-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+    gap:24px;
+}
+.panel{
+    background:#fff;
+    border:1px solid #E7ECE8;
+    border-radius:24px;
+    padding:24px;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    transition:.3s;
 }
 
-.panel {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    padding: 18px;
-    box-shadow: var(--shadow);
-    animation: slideUp 0.6s ease-out;
-    transition: all 0.3s ease;
+.panel:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 45px rgba(0,0,0,.10);
 }
 
-.panel:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 25px 60px rgba(22, 43, 28, 0.12);
+.panel h3{
+    font-size:1.35rem;
+    margin-bottom:24px;
+    font-weight:700;
+    color:#183D2B;
 }
-
-/* ==================== Charts ==================== */
+/* ==================== Modern Bar Chart ==================== */
 
 .bars {
-    display: grid;
-    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 .bar-row {
     display: grid;
-    grid-template-columns: 100px 1fr 56px;
+    grid-template-columns: 130px 1fr 60px;
     align-items: center;
-    gap: 10px;
-    animation: slideInLeft 0.5s ease-out both;
-}
-
-.bar-row:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.bar-row:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.bar-row:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.bar-row:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-.bar-row:nth-child(5) {
-    animation-delay: 0.5s;
-}
-
-.bar-row:nth-child(6) {
-    animation-delay: 0.6s;
-}
-
-.bar-row:nth-child(7) {
-    animation-delay: 0.7s;
-}
-
-.bar-row:nth-child(8) {
-    animation-delay: 0.8s;
+    gap: 16px;
+    animation: slideInLeft .5s ease both;
 }
 
 .bar-label {
-    font-size: 0.9rem;
-    color: var(--muted);
+    font-size: .95rem;
+    font-weight: 500;
+    color: #52635b;
+    white-space: nowrap;
 }
 
 .bar-track {
-    height: 12px;
+    position: relative;
     width: 100%;
-    background: #edf3ea;
+    height: 10px;
     border-radius: 999px;
+    background: #eef3ef;
     overflow: hidden;
 }
 
 .bar-fill {
     height: 100%;
+    width: var(--bar-width);
     border-radius: 999px;
-    background: linear-gradient(90deg, #2e8c56, #5fb06b);
-    animation: barFill 1s ease-out both;
+    background: linear-gradient(90deg,#2E7D32 0%,#43A047 50%,#66BB6A 100%);
+    box-shadow: 0 2px 10px rgba(46,125,50,.25);
+    animation: barFill .9s cubic-bezier(.4,0,.2,1) both;
 }
 
-.bar-row:nth-child(1) .bar-fill {
-    animation-delay: 0.1s;
-}
-
-.bar-row:nth-child(2) .bar-fill {
-    animation-delay: 0.2s;
-}
-
-.bar-row:nth-child(3) .bar-fill {
-    animation-delay: 0.3s;
-}
-
-.bar-row:nth-child(4) .bar-fill {
-    animation-delay: 0.4s;
-}
-
-.bar-row:nth-child(5) .bar-fill {
-    animation-delay: 0.5s;
-}
-
-.bar-row:nth-child(6) .bar-fill {
-    animation-delay: 0.6s;
-}
-
-.bar-row:nth-child(7) .bar-fill {
-    animation-delay: 0.7s;
-}
-
-.bar-row:nth-child(8) .bar-fill {
-    animation-delay: 0.8s;
+.bar-fill::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255,255,255,.35) 50%,
+        transparent 100%
+    );
+    animation: shimmer 2s linear infinite;
 }
 
 .bar-value {
     text-align: right;
+    font-size: 1rem;
     font-weight: 700;
-    color: var(--primary);
+    color: #1D6F3C;
 }
 
+.bar-row:hover .bar-track{
+    background:#e5efe7;
+}
+
+.bar-row:hover .bar-fill{
+    filter:brightness(1.05);
+}
+
+.bar-row:hover .bar-label{
+    color:#1D6F3C;
+}
 /* ==================== RT Cards ==================== */
 
 .rt-grid {
