@@ -320,12 +320,13 @@ function renderAgeChart(containerId, data) {
             const pctHeight = (item.value / max) * 100;
             return `
         <div class="age-column">
+          <span class="age-bar-value-static">${item.value}</span>
           <div class="age-bar-track">
             <div class="age-bar-fill" style="height: ${pctHeight}%; transition-delay: ${index * 0.08}s;">
               <div class="age-bar-tooltip">${item.value} jiwa</div>
             </div>
           </div>
-          <div class="age-label-text">${item.label}</div>
+          <div class="age-label-text">${item.label} Th</div>
         </div>
       `;
         })

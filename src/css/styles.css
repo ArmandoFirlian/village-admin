@@ -1018,7 +1018,7 @@ main {
 /* 1. Gender Chart (Side-by-side Radial Progress Cards) */
 .gender-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 16px;
 }
 
@@ -1163,9 +1163,22 @@ main {
     cursor: pointer;
 }
 
+.age-bar-value-static {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 5px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.age-column:hover .age-bar-value-static {
+    transform: translateY(-2px) scale(1.1);
+    color: #5fb06b;
+}
+
 .age-bar-track {
     width: 100%;
-    height: 100%;
+    height: 130px;
     display: flex;
     align-items: flex-end;
     background: #edf3ea;
