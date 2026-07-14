@@ -307,7 +307,11 @@ main {
 }
 
 .chart-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr 1fr;
+}
+
+.chart-full-width {
+    grid-column: 1 / -1;
 }
 
 .panel {
@@ -1018,6 +1022,10 @@ main {
         grid-template-columns: 1fr;
     }
 
+    .chart-full-width {
+        grid-column: 1 / -1;
+    }
+
     .rt-grid {
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     }
@@ -1175,9 +1183,11 @@ main {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    height: 220px;
-    padding: 30px 10px 10px;
-    gap: 12px;
+    height: auto;
+    min-height: 180px;
+    padding: 30px 8px 10px;
+    gap: 8px;
+    overflow: visible;
 }
 
 .age-column {
@@ -1205,7 +1215,8 @@ main {
 
 .age-bar-track {
     width: 100%;
-    height: 130px;
+    height: 120px;
+    flex-shrink: 0;
     display: flex;
     align-items: flex-end;
     background: #edf3ea;
