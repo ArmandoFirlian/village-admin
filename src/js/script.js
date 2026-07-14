@@ -224,27 +224,144 @@ function renderSummary() {
 }
 
 /**
- * Render bar chart untuk data kuantitatif
- * @param {string} containerId - ID element untuk chart
- * @param {Array} data - Array data dengan struktur {label, value}
- * @param {Function} formatValue - Optional formatter untuk value display
+ * Get custom SVG icon for occupation label
+ * @param {string} label - Occupation label
+ * @returns {string} SVG markup
  */
-function renderBarChart(containerId, data, formatValue = (v) => v) {
+function getOccupationIcon(label) {
+    const petaniIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 8a7 7 0 0 1-9 10Z"/><path d="M9 22v-4"/><path d="M8 12c.5-2.5 1.5-4.5 4-5"/></svg>`;
+    const buruhIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 5 4 4M20.5 7.5a2.12 2.12 0 1 1-3 3L3.5 24H2v-1.5L16.5 8.5l4-4Z"/></svg>`;
+    const pedagangIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>`;
+    const pnsIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>`;
+    const honorerIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>`;
+    const pelajarIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>`;
+    const irtIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`;
+    const lainnyaIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>`;
+
+    switch (label) {
+        case 'Petani': return petaniIcon;
+        case 'Buruh': return buruhIcon;
+        case 'Pedagang': return pedagangIcon;
+        case 'PNS': return pnsIcon;
+        case 'Honorer': return honorerIcon;
+        case 'Pelajar/Mahasiswa': return pelajarIcon;
+        case 'IRT': return irtIcon;
+        default: return lainnyaIcon;
+    }
+}
+
+/**
+ * Render circular radial progress cards for gender distribution
+ * @param {string} containerId - Container element ID
+ * @param {number} pria - Total male population
+ * @param {number} wanita - Total female population
+ */
+function renderGenderChart(containerId, pria, wanita) {
+    const container = document.getElementById(containerId);
+    const total = pria + wanita;
+    const pctPria = ((pria / total) * 100).toFixed(1);
+    const pctWanita = ((wanita / total) * 100).toFixed(1);
+    const dashOffsetPria = 100 - parseFloat(pctPria);
+    const dashOffsetWanita = 100 - parseFloat(pctWanita);
+
+    container.innerHTML = `
+    <div class="gender-card-unique pria-card">
+      <div class="gender-card-info">
+        <h4>Pria</h4>
+        <strong>${pria} <small>jiwa</small></strong>
+        <span>${pctPria}%</span>
+      </div>
+      <div class="gender-card-visual">
+        <svg class="radial-progress-svg" viewBox="0 0 36 36">
+          <circle class="radial-progress-bg" cx="18" cy="18" r="15.9155"></circle>
+          <circle class="radial-progress-bar" cx="18" cy="18" r="15.9155" stroke-dasharray="100" stroke-dashoffset="${dashOffsetPria}"></circle>
+        </svg>
+        <div class="gender-icon-overlay">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="10" cy="14" r="6"></circle>
+            <path d="M14 10l6-6M14 4h6v6"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="gender-card-unique wanita-card">
+      <div class="gender-card-info">
+        <h4>Wanita</h4>
+        <strong>${wanita} <small>jiwa</small></strong>
+        <span>${pctWanita}%</span>
+      </div>
+      <div class="gender-card-visual">
+        <svg class="radial-progress-svg" viewBox="0 0 36 36">
+          <circle class="radial-progress-bg" cx="18" cy="18" r="15.9155"></circle>
+          <circle class="radial-progress-bar" cx="18" cy="18" r="15.9155" stroke-dasharray="100" stroke-dashoffset="${dashOffsetWanita}"></circle>
+        </svg>
+        <div class="gender-icon-overlay">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="6"></circle>
+            <path d="M12 14v8M9 18h6"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+/**
+ * Render vertical column bar chart for age category distribution
+ * @param {string} containerId - Container element ID
+ * @param {Array} data - Age category data array
+ */
+function renderAgeChart(containerId, data) {
     const container = document.getElementById(containerId);
     const max = Math.max(...data.map((item) => item.value));
 
     container.innerHTML = data
-        .map(
-            (item, index) => `
-        <div class="bar-row" style="animation-delay: ${index * 0.1}s">
-          <div class="bar-label">${item.label}</div>
-          <div class="bar-track">
-            <div class="bar-fill" style="--bar-width: ${(item.value / max) * 100}%; animation-delay: ${index * 0.1 + 0.1}s;"></div>
+        .map((item, index) => {
+            const pctHeight = (item.value / max) * 100;
+            return `
+        <div class="age-column">
+          <div class="age-bar-track">
+            <div class="age-bar-fill" style="height: ${pctHeight}%; transition-delay: ${index * 0.08}s;">
+              <div class="age-bar-tooltip">${item.value} jiwa</div>
+            </div>
           </div>
-          <div class="bar-value">${formatValue(item.value)}</div>
+          <div class="age-label-text">${item.label}</div>
         </div>
-      `
-        )
+      `;
+        })
+        .join('');
+}
+
+/**
+ * Render horizontal icon list rows for occupation distribution
+ * @param {string} containerId - Container element ID
+ * @param {Array} data - Occupation data array
+ */
+function renderOccupationChart(containerId, data) {
+    const container = document.getElementById(containerId);
+    const max = Math.max(...data.map((item) => item.value));
+
+    container.innerHTML = data
+        .map((item, index) => {
+            const pctWidth = (item.value / max) * 100;
+            const icon = getOccupationIcon(item.label);
+            return `
+        <div class="occupation-row" style="animation-delay: ${index * 0.06}s">
+          <div class="occ-icon-wrapper">
+            ${icon}
+          </div>
+          <div class="occ-info-bar">
+            <div class="occ-text-container">
+              <span class="occ-title">${item.label}</span>
+              <span class="occ-value-text">${item.value} jiwa</span>
+            </div>
+            <div class="occ-bar-track">
+              <div class="occ-bar-fill" style="width: ${pctWidth}%; transition-delay: ${index * 0.06 + 0.1}s;"></div>
+            </div>
+          </div>
+        </div>
+      `;
+        })
         .join('');
 }
 
@@ -359,12 +476,9 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('🏘️ Village Admin Dashboard - Initializing...');
 
     renderSummary();
-    renderBarChart('gender-chart', [
-        { label: 'Pria', value: dashboardData.pria },
-        { label: 'Wanita', value: dashboardData.wanita }
-    ]);
-    renderBarChart('age-chart', dashboardData.ageCategories);
-    renderBarChart('occupation-chart', dashboardData.occupations);
+    renderGenderChart('gender-chart', dashboardData.pria, dashboardData.wanita);
+    renderAgeChart('age-chart', dashboardData.ageCategories);
+    renderOccupationChart('occupation-chart', dashboardData.occupations);
     renderRtCards();
     renderRtFocusSummary();
     updateMapFocus();

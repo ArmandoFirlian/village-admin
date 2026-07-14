@@ -1034,4 +1034,309 @@ main {
         grid-template-columns: 80px 1fr 40px;
         gap: 8px;
     }
+
+    .gender-container {
+        grid-template-columns: 1fr;
+    }
 }
+
+/* ==================== Unique Charts ==================== */
+
+/* 1. Gender Chart (Side-by-side Radial Progress Cards) */
+.gender-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.gender-card-unique {
+    background: linear-gradient(135deg, #ffffff, #fafdfa);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow);
+}
+
+.gender-card-unique:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 45px rgba(22, 43, 28, 0.12);
+}
+
+.gender-card-unique.pria-card {
+    border-left: 5px solid #2e8c56;
+}
+
+.gender-card-unique.wanita-card {
+    border-left: 5px solid #d9744b;
+}
+
+.gender-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 1;
+}
+
+.gender-card-info h4 {
+    margin: 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+}
+
+.gender-card-info strong {
+    font-size: 1.8rem;
+    color: var(--text);
+    line-height: 1.1;
+}
+
+.gender-card-info strong small {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--muted);
+}
+
+.gender-card-info span {
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.pria-card span {
+    color: #1e7843;
+}
+
+.wanita-card span {
+    color: #c95c2f;
+}
+
+.gender-card-visual {
+    position: relative;
+    width: 76px;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.radial-progress-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.radial-progress-bg {
+    fill: none;
+    stroke: #edf3ea;
+    stroke-width: 4.5;
+}
+
+.radial-progress-bar {
+    fill: none;
+    stroke-width: 4.5;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pria-card .radial-progress-bar {
+    stroke: #2e8c56;
+}
+
+.wanita-card .radial-progress-bar {
+    stroke: #d9744b;
+}
+
+.gender-icon-overlay {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pria-card .gender-icon-overlay {
+    color: #2e8c56;
+}
+
+.wanita-card .gender-icon-overlay {
+    color: #d9744b;
+}
+
+/* 2. Age Chart (Vertical Column Chart) */
+.age-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 220px;
+    padding: 30px 10px 10px;
+    gap: 12px;
+}
+
+.age-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.age-bar-track {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    background: #edf3ea;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+.age-column:hover .age-bar-track {
+    background: #e1ebdc;
+}
+
+.age-bar-fill {
+    width: 100%;
+    background: linear-gradient(180deg, #5fb06b 0%, #2e8c56 100%);
+    border-radius: 8px 8px 0 0;
+    height: 0;
+    transition: height 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+    position: relative;
+}
+
+.age-bar-tooltip {
+    position: absolute;
+    top: -36px;
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    background: rgba(22, 59, 34, 0.92);
+    color: white;
+    padding: 5px 9px;
+    border-radius: 8px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.age-bar-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 4px 4px 0;
+    border-style: solid;
+    border-color: rgba(22, 59, 34, 0.92) transparent;
+    display: block;
+    width: 0;
+}
+
+.age-column:hover .age-bar-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.age-label-text {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--muted);
+    text-align: center;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.age-column:hover .age-label-text {
+    color: var(--primary);
+}
+
+/* 3. Occupation Chart (Horizontal Icon-based List) */
+.occupation-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.occupation-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    animation: slideInLeft 0.5s ease-out both;
+}
+
+.occ-icon-wrapper {
+    width: 36px;
+    height: 36px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.occupation-row:hover .occ-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+    background: #c3eec3;
+}
+
+.occ-info-bar {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.occ-text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.occ-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.occ-value-text {
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.occ-bar-track {
+    height: 10px;
+    background: #edf3ea;
+    border-radius: 999px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.occ-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2e8c56 0%, #7db66c 100%);
+    border-radius: 999px;
+    width: 0;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
