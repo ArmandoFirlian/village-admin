@@ -708,6 +708,86 @@ main {
     color: #fff;
 }
 
+/* ==================== Tourism & UMKM Directory ==================== */
+
+.directory-hero {
+    padding-bottom: 48px;
+}
+
+.directory-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.destination-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.destination-card__image {
+    display: block;
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+}
+
+.destination-card__body {
+    padding: 18px;
+}
+
+.category-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    color: #174f2f;
+    background: var(--primary-soft);
+    border-radius: 999px;
+    font-size: .78rem;
+    font-weight: 700;
+}
+
+.card-location {
+    margin: 14px 0 0;
+    color: var(--muted);
+    font-size: .9rem;
+}
+
+.empty-card {
+    display: grid;
+    place-items: center;
+    min-height: 260px;
+    border-style: dashed;
+    text-align: center;
+}
+
+.empty-card > span {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 4px;
+    color: var(--primary);
+    background: var(--primary-soft);
+    border-radius: 50%;
+    font-size: 1.6rem;
+}
+
+.empty-card h3,
+.empty-card p {
+    max-width: 420px;
+}
+
+.info-card ul {
+    padding-left: 20px;
+    color: var(--muted);
+}
+
+.info-card li + li {
+    margin-top: 10px;
+}
+
+
 .tourism-card__icon {
     display: grid;
     place-items: center;
@@ -1152,6 +1232,10 @@ main {
     }
 
     .tourism-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .directory-grid {
         grid-template-columns: 1fr;
     }
 
