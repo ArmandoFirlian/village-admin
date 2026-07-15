@@ -157,7 +157,14 @@ body {
 
 .hero {
     padding: 48px 24px 18px;
-    background: linear-gradient(135deg, #163b22, #255e3a 55%, #3b7d4d);
+    background:
+  linear-gradient(
+    90deg,
+    rgba(10, 62, 32, 0.90) 0%,
+    rgba(10, 62, 32, 0.78) 48%,
+    rgba(10, 62, 32, 0.55) 100%
+  ),
+  url("./tukik.JPG") center center / cover no-repeat;
     color: #fff;
     animation: slideDown 0.8s ease-out;
 }
