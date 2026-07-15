@@ -1,15 +1,61 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" prefix="og: https://ogp.me/ns#">
 
 <head>
+  <!-- ===== Meta Dasar ===== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Administrasi Padukuhan Ngentak</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ===== SEO Core ===== -->
+  <title>Padukuhan Ngentak Poncosari — Sistem Informasi Administrasi & Data Kependudukan</title>
+  <meta name="description" content="Website resmi Padukuhan Ngentak, Kalurahan Poncosari, Bantul. Menyajikan data kependudukan, peta wilayah, pembagian RT, dan informasi administrasi padukuhan secara digital." />
+  <meta name="keywords" content="Padukuhan Ngentak, Poncosari, Bantul, administrasi padukuhan, data penduduk, peta wilayah, KKN, dusun ngentak, kalurahan poncosari, sistem informasi desa" />
+  <meta name="author" content="Armando Firlian" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="theme-color" content="#1d6f3c" />
+  <link rel="canonical" href="https://ngentak-poncosari.id/" />
+
+  <!-- ===== Geo Tags (Lokasi Poncosari, Bantul, DIY) ===== -->
+  <meta name="geo.region" content="ID-YO" />
+  <meta name="geo.placename" content="Padukuhan Ngentak, Poncosari, Bantul, Daerah Istimewa Yogyakarta" />
+  <meta name="geo.position" content="-7.9950;110.2500" />
+  <meta name="ICBM" content="-7.9950, 110.2500" />
+
+  <!-- ===== Open Graph (Facebook, WhatsApp, LinkedIn) ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ngentak-poncosari.id/" />
+  <meta property="og:site_name" content="Administrasi Padukuhan Ngentak" />
+  <meta property="og:title" content="Padukuhan Ngentak Poncosari — Sistem Informasi Administrasi" />
+  <meta property="og:description" content="Dashboard digital administrasi Padukuhan Ngentak, Poncosari, Bantul. Data 824 penduduk, peta wilayah 6 RT, dan informasi demografi lengkap." />
+  <meta property="og:image" content="https://ngentak-poncosari.id/map.jpg" />
+  <meta property="og:image:alt" content="Peta wilayah Padukuhan Ngentak, Poncosari, Bantul" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="id_ID" />
+
+  <!-- ===== Twitter Card ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Padukuhan Ngentak Poncosari — Sistem Informasi Administrasi" />
+  <meta name="twitter:description" content="Dashboard digital administrasi Padukuhan Ngentak, Poncosari, Bantul. Data 824 penduduk, peta wilayah 6 RT, dan informasi demografi lengkap." />
+  <meta name="twitter:image" content="https://ngentak-poncosari.id/map.jpg" />
+
+  <!-- ===== Styles ===== -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <header class="hero">
+  <header class="hero" id="beranda">
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <a class="main-nav__brand" href="#beranda">Ngentak</a>
+      <div class="main-nav__links">
+        <a href="#profil-padukuhan">Profil Padukuhan</a>
+        <a href="#penduduk">Data Kependudukan</a>
+        <a href="#peta">Peta Wilayah</a>
+        <a href="#rt">Pembagian RT</a>
+        <a href="#wisata-umkm">Wisata &amp; UMKM</a>
+      </div>
+    </nav>
     <div class="hero__content">
       <p class="eyebrow">Sistem Informasi Administrasi</p>
       <h1>Padukuhan Ngentak Poncosari</h1>
@@ -60,7 +106,7 @@
             <small>Representasi visual batas RT, sawah, peternakan, dan objek wisata.</small>
           </div>
           <div class="map-card__image">
-            <img src="map.jpg" alt="Peta wilayah Dusun Ngentak" class="map-image" />
+            <img src="mapis.jpg" alt="Peta wilayah Dusun Ngentak" class="map-image" />
           </div>
           <p class="map-image-note">Peta wilayah Dusun Ngentak</p>
         </div>
@@ -91,19 +137,22 @@
       </div>
 
       <div class="chart-grid">
+        <!-- Pekerjaan Chart (Full Width Row) -->
+        <article class="panel chart-full-width">
+          <h3>Pekerjaan</h3>
+          <div id="occupation-chart" class="occupation-container"></div>
+        </article>
+
+        <!-- Jenis Kelamin Chart (Left Column) -->
         <article class="panel">
           <h3>Jenis Kelamin</h3>
           <div id="gender-chart" class="gender-container"></div>
         </article>
 
+        <!-- Kategori Umur Chart (Right Column) -->
         <article class="panel">
           <h3>Kategori Umur</h3>
           <div id="age-chart" class="age-container"></div>
-        </article>
-
-        <article class="panel">
-          <h3>Pekerjaan</h3>
-          <div id="occupation-chart" class="occupation-container"></div>
         </article>
       </div>
     </section>
@@ -119,6 +168,33 @@
       <div class="panel rt-detail-panel">
         <p class="eyebrow">Detail RT Terpilih</p>
         <div id="rt-focus-summary" class="focus-summary"></div>
+      </div>
+    </section>
+
+    <section class="section" id="wisata-umkm">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Potensi Lokal</p>
+          <h2>Objek Wisata &amp; UMKM</h2>
+        </div>
+      </div>
+      <div class="tourism-grid">
+        <article class="panel tourism-card tourism-card--featured">
+          <img src="assets/wisata-bantul.jpeg" alt="Landmark wisata di Kabupaten Bantul" class="tourism-card__image" />
+          <div class="tourism-card__content">
+            <p class="eyebrow">Objek Wisata</p>
+            <h3>Pesona Wisata Bantul</h3>
+            <p>Kenali daya tarik wisata di sekitar Padukuhan Ngentak, termasuk informasi akses, fasilitas, dan potensi wisata lokal.</p>
+            <a class="text-link" href="#profil-padukuhan">Lihat profil wilayah &rarr;</a>
+          </div>
+        </article>
+        <article class="panel tourism-card">
+          <span class="tourism-card__icon" aria-hidden="true">&#127978;</span>
+          <p class="eyebrow">Usaha Warga</p>
+          <h3>UMKM Lokal</h3>
+          <p>Bagian untuk katalog produk warga, nama usaha, nomor kontak, serta informasi pemesanan atau kunjungan.</p>
+          <a class="text-link" href="#profil-kkn">Tambah profil UMKM &rarr;</a>
+        </article>
       </div>
     </section>
 

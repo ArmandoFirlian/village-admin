@@ -141,6 +141,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -156,6 +160,45 @@ body {
     background: linear-gradient(135deg, #163b22, #255e3a 55%, #3b7d4d);
     color: #fff;
     animation: slideDown 0.8s ease-out;
+}
+
+.main-nav {
+    max-width: 1100px;
+    margin: 0 auto 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-nav__brand {
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.main-nav__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+.main-nav__links a {
+    padding: 8px 10px;
+    border-radius: 999px;
+    font-size: 0.86rem;
+    transition: background 0.2s ease;
+}
+
+.main-nav__links a:hover,
+.main-nav__links a:focus-visible {
+    background: rgba(255, 255, 255, 0.16);
 }
 
 .hero__content {
@@ -307,7 +350,11 @@ main {
 }
 
 .chart-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr 1fr;
+}
+
+.chart-full-width {
+    grid-column: 1 / -1;
 }
 
 .panel {
@@ -619,6 +666,70 @@ main {
 
 .profile-layout {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* ==================== Tourism & UMKM ==================== */
+
+.tourism-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.tourism-card {
+    background: linear-gradient(135deg, #ffffff, #f0f8eb);
+}
+
+.tourism-card--featured {
+    padding: 0;
+    overflow: hidden;
+}
+
+.tourism-card__image {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.tourism-card__content {
+    position: relative;
+    margin-top: -54px;
+    padding: 72px 18px 18px;
+    color: #fff;
+    background: linear-gradient(180deg, rgba(14, 56, 34, 0) 0%, #174f2f 32%, #123d25 100%);
+}
+
+.tourism-card__content .eyebrow {
+    color: #cfe9d1;
+}
+
+.tourism-card__content .text-link {
+    color: #fff;
+}
+
+.tourism-card__icon {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 16px;
+    border-radius: 14px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    font-size: 1.35rem;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.text-link:hover {
+    text-decoration: underline;
 }
 
 .profile-card--muted {
@@ -1002,6 +1113,16 @@ main {
 }
 
 @media (max-width: 640px) {
+    .main-nav {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .main-nav__links {
+        justify-content: flex-start;
+    }
+
     .hero {
         padding: 32px 16px 12px;
     }
@@ -1018,11 +1139,19 @@ main {
         grid-template-columns: 1fr;
     }
 
+    .chart-full-width {
+        grid-column: 1 / -1;
+    }
+
     .rt-grid {
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     }
 
     .profile-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .tourism-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1175,9 +1304,11 @@ main {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    height: 220px;
-    padding: 30px 10px 10px;
-    gap: 12px;
+    height: auto;
+    min-height: 180px;
+    padding: 30px 8px 10px;
+    gap: 8px;
+    overflow: visible;
 }
 
 .age-column {
@@ -1205,7 +1336,8 @@ main {
 
 .age-bar-track {
     width: 100%;
-    height: 130px;
+    height: 120px;
+    flex-shrink: 0;
     display: flex;
     align-items: flex-end;
     background: #edf3ea;
