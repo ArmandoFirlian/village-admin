@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://profil-padukuhan-ngentak.vercel.app/sitemap.xml
+Sitemap: https://profil-padukuhan-ngentak.my.id/sitemap.xml
