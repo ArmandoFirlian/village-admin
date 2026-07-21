@@ -27,7 +27,7 @@ const dashboardData = {
       rt: 'RT 01',
       total: 134,
       pria: 67,
-      wanita: 67,
+      wanita: 89,
       leader: 'Ketua RT 01',
       mainJobs: 'Pertanian & UMKM',
       ageCategories: [
