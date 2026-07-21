@@ -25,7 +25,7 @@ const dashboardData = {
   rt: [
     {
       rt: 'RT 01',
-      total: 134,
+      total: 146,
       pria: 67,
       wanita: 89,
       leader: 'Ketua RT 01',
