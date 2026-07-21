@@ -155,28 +155,28 @@ const dashboardData = {
     },
     {
       rt: 'RT 06',
-      total: 142,
-      pria: 71,
-      wanita: 71,
+      total: 114,
+      pria: 55,
+      wanita: 59,
       leader: 'Ketua RT 06',
-      mainJobs: 'Pertanian & kewirausahaan',
+      mainJobs: 'Pertanian',
       ageCategories: [
-        { label: '0-5', value: 12 },
-        { label: '6-12', value: 16 },
-        { label: '13-17', value: 14 },
-        { label: '18-25', value: 18 },
-        { label: '26-45', value: 43 },
-        { label: '46-60', value: 26 },
-        { label: '61+', value: 13 }
+        { label: '0-5', value: 1  },
+        { label: '6-12', value: 14 },
+        { label: '13-17', value: 7 },
+        { label: '18-25', value: 14 },
+        { label: '26-45', value: 35 },
+        { label: '46-60', value: 24 },
+        { label: '61+', value: 19 }
       ],
       occupations: [
-        { label: 'Petani', value: 30 },
-        { label: 'Buruh', value: 16 },
-        { label: 'Pedagang', value: 15 },
-        { label: 'PNS', value: 6 },
-        { label: 'IRT', value: 25 },
-        { label: 'Pelajar/Mahasiswa', value: 22 },
-        { label: 'Lainnya', value: 28 }
+        { label: 'Petani', value: 29 },
+        { label: 'Buruh', value: 5 },
+        { label: 'Pedagang', value: 7 },
+        { label: 'PNS', value: 3 },
+        { label: 'IRT', value: 8 },
+        { label: 'Pelajar/Mahasiswa', value: 16 },
+        { label: 'Lainnya', value: 37 }
       ]
     }
   ]
