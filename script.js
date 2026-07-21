@@ -51,28 +51,28 @@ const dashboardData = {
     },
     {
       rt: 'RT 02',
-      total: 148,
-      pria: 72,
-      wanita: 76,
+      total: 163,
+      pria: 83,
+      wanita: 80,
       leader: 'Ketua RT 02',
       mainJobs: 'Buruh & perdagangan',
       ageCategories: [
-        { label: '0-5', value: 13 },
-        { label: '6-12', value: 19 },
-        { label: '13-17', value: 14 },
-        { label: '18-25', value: 21 },
-        { label: '26-45', value: 44 },
-        { label: '46-60', value: 25 },
-        { label: '61+', value: 12 }
+        { label: '0-5', value: 5 },
+        { label: '6-12', value: 9 },
+        { label: '13-17', value: 11 },
+        { label: '18-25', value: 15 },
+        { label: '26-45', value: 46 },
+        { label: '46-60', value: 43 },
+        { label: '61+', value: 34 }
       ],
       occupations: [
-        { label: 'Petani', value: 20 },
-        { label: 'Buruh', value: 29 },
-        { label: 'Pedagang', value: 18 },
-        { label: 'PNS', value: 4 },
-        { label: 'IRT', value: 26 },
-        { label: 'Pelajar/Mahasiswa', value: 24 },
-        { label: 'Lainnya', value: 27 }
+        { label: 'Petani', value: 64 },
+        { label: 'Buruh', value: 16 },
+        { label: 'Pedagang', value: 6 },
+        { label: 'PNS', value: 1 },
+        { label: 'IRT', value: 5 },
+        { label: 'Pelajar/Mahasiswa', value: 27 },
+        { label: 'Lainnya', value: 44 }
       ]
     },
     {
