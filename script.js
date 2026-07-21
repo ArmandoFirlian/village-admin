@@ -129,9 +129,9 @@ const dashboardData = {
     },
     {
       rt: 'RT 05',
-      total: 134,
-      pria: 67,
-      wanita: 67,
+      total: 155,
+      pria: 80,
+      wanita: 75,
       leader: 'Ketua RT 05',
       mainJobs: 'Pendidikan & usaha lokal',
       ageCategories: [
