@@ -55,7 +55,7 @@ const dashboardData = {
       pria: 83,
       wanita: 80,
       leader: 'Ketua RT 02',
-      mainJobs: 'Buruh & perdagangan',
+      mainJobs: 'Buruh Tani/Perkebunan',
       ageCategories: [
         { label: '0-5', value: 5 },
         { label: '6-12', value: 9 },
@@ -103,19 +103,19 @@ const dashboardData = {
     },
     {
       rt: 'RT 04',
-      total: 137,
+      total: 123,
       pria: 70,
       wanita: 67,
       leader: 'Ketua RT 04',
-      mainJobs: 'Petani & jasa',
+      mainJobs: 'Buruh Tani/Perkebunan',
       ageCategories: [
-        { label: '0-5', value: 11 },
-        { label: '6-12', value: 18 },
-        { label: '13-17', value: 13 },
-        { label: '18-25', value: 19 },
-        { label: '26-45', value: 41 },
-        { label: '46-60', value: 24 },
-        { label: '61+', value: 11 }
+        { label: '0-5', value: 6 },
+        { label: '6-12', value: 14 },
+        { label: '13-17', value: 7 },
+        { label: '18-25', value: 11 },
+        { label: '26-45', value: 42 },
+        { label: '46-60', value: 29 },
+        { label: '61+', value: 20 }
       ],
       occupations: [
         { label: 'Petani', value: 28 },
