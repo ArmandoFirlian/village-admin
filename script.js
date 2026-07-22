@@ -77,28 +77,28 @@ const dashboardData = {
     },
     {
       rt: 'RT 03',
-      total: 129,
-      pria: 62,
-      wanita: 67,
+      total: 141,
+      pria: 68,
+      wanita: 73,
       leader: 'Ketua RT 03',
       mainJobs: 'Petani & rumah tangga',
       ageCategories: [
-        { label: '0-5', value: 10 },
-        { label: '6-12', value: 17 },
-        { label: '13-17', value: 12 },
+        { label: '0-5', value: 5 },
+        { label: '6-12', value: 18 },
+        { label: '13-17', value: 11 },
         { label: '18-25', value: 16 },
         { label: '26-45', value: 38 },
         { label: '46-60', value: 24 },
-        { label: '61+', value: 12 }
+        { label: '61+', value: 25 }
       ],
       occupations: [
-        { label: 'Petani', value: 31 },
-        { label: 'Buruh', value: 17 },
-        { label: 'Pedagang', value: 11 },
-        { label: 'PNS', value: 5 },
-        { label: 'IRT', value: 23 },
-        { label: 'Pelajar/Mahasiswa', value: 20 },
-        { label: 'Lainnya', value: 22 }
+        { label: 'Petani', value: 1 },
+        { label: 'Buruh', value: 58 },
+        { label: 'Pedagang', value: 14 },
+        { label: 'PNS', value: 0 },
+        { label: 'IRT', value: 3 },
+        { label: 'Pelajar/Mahasiswa', value: 19 },
+        { label: 'Lainnya', value: 46 }
       ]
     },
     {
