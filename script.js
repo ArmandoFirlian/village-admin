@@ -103,28 +103,28 @@ const dashboardData = {
     },
     {
       rt: 'RT 04',
-      total: 123,
-      pria: 70,
-      wanita: 67,
+      total: 153,
+      pria: 81,
+      wanita: 78,
       leader: 'Ketua RT 04',
       mainJobs: 'Buruh Tani/Perkebunan',
       ageCategories: [
-        { label: '0-5', value: 6 },
-        { label: '6-12', value: 14 },
-        { label: '13-17', value: 7 },
-        { label: '18-25', value: 11 },
-        { label: '26-45', value: 42 },
-        { label: '46-60', value: 29 },
+        { label: '0-5', value: 7 },
+        { label: '6-12', value: 16 },
+        { label: '13-17', value: 10 },
+        { label: '18-25', value: 12 },
+        { label: '26-45', value: 55 },
+        { label: '46-60', value: 33 },
         { label: '61+', value: 20 }
       ],
       occupations: [
-        { label: 'Petani', value: 28 },
-        { label: 'Buruh', value: 19 },
-        { label: 'Pedagang', value: 13 },
+        { label: 'Petani', value: 27 },
+        { label: 'Buruh', value: 4 },
+        { label: 'Pedagang', value: 29 },
         { label: 'PNS', value: 7 },
-        { label: 'IRT', value: 21 },
+        { label: 'IRT', value: 3 },
         { label: 'Pelajar/Mahasiswa', value: 23 },
-        { label: 'Lainnya', value: 26 }
+        { label: 'Lainnya', value: 67 }
       ]
     },
     {
