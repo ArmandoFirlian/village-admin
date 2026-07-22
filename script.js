@@ -133,24 +133,24 @@ const dashboardData = {
       pria: 80,
       wanita: 75,
       leader: 'Ketua RT 05',
-      mainJobs: 'Pendidikan & usaha lokal',
+      mainJobs: 'Buruh Petani',
       ageCategories: [
-        { label: '0-5', value: 12 },
+        { label: '0-5', value: 9 },
         { label: '6-12', value: 18 },
-        { label: '13-17', value: 14 },
-        { label: '18-25', value: 18 },
-        { label: '26-45', value: 39 },
-        { label: '46-60', value: 23 },
-        { label: '61+', value: 10 }
+        { label: '13-17', value: 9 },
+        { label: '18-25', value: 19 },
+        { label: '26-45', value: 36 },
+        { label: '46-60', value: 25 },
+        { label: '61+', value: 38 }
       ],
       occupations: [
-        { label: 'Petani', value: 17 },
-        { label: 'Buruh', value: 14 },
-        { label: 'Pedagang', value: 12 },
-        { label: 'PNS', value: 9 },
-        { label: 'IRT', value: 25 },
-        { label: 'Pelajar/Mahasiswa', value: 28 },
-        { label: 'Lainnya', value: 29 }
+        { label: 'Petani', value: 1 },
+        { label: 'Buruh', value: 43 },
+        { label: 'Pedagang', value: 14 },
+        { label: 'PNS', value: 2 },
+        { label: 'IRT', value: 8 },
+        { label: 'Pelajar/Mahasiswa', value: 31 },
+        { label: 'Lainnya', value: 56 }
       ]
     },
     {
@@ -171,12 +171,12 @@ const dashboardData = {
       ],
       occupations: [
         { label: 'Petani', value: 29 },
-        { label: 'Buruh', value: 5 },
+        { label: 'Buruh', value: 6 },
         { label: 'Pedagang', value: 7 },
         { label: 'PNS', value: 3 },
         { label: 'IRT', value: 8 },
-        { label: 'Pelajar/Mahasiswa', value: 16 },
-        { label: 'Lainnya', value: 37 }
+        { label: 'Pelajar/Mahasiswa', value: 17 },
+        { label: 'Lainnya', value: 40 }
       ]
     }
   ]
