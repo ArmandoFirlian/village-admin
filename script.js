@@ -83,13 +83,13 @@ const dashboardData = {
       leader: 'Ketua RT 03',
       mainJobs: 'Petani & rumah tangga',
       ageCategories: [
-        { label: '0-5', value: 5 },
-        { label: '6-12', value: 18 },
+        { label: '0-5', value: 6 },
+        { label: '6-12', value: 17 },
         { label: '13-17', value: 11 },
         { label: '18-25', value: 16 },
-        { label: '26-45', value: 38 },
-        { label: '46-60', value: 24 },
-        { label: '61+', value: 25 }
+        { label: '26-45', value: 37 },
+        { label: '46-60', value: 30 },
+        { label: '61+', value: 24 }
       ],
       occupations: [
         { label: 'Petani', value: 1 },
