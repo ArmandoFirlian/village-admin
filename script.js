@@ -1,7 +1,7 @@
 const dashboardData = {
-  totalPenduduk: 824,
-  pria: 412,
-  wanita: 412,
+  totalPenduduk: 917,
+  pria: 463,
+  wanita: 454,
   activeRt: 'RT 01',
   ageCategories: [
     { label: '0-5', value: 58 },
