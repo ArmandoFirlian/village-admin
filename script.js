@@ -103,9 +103,9 @@ const dashboardData = {
     },
     {
       rt: 'RT 04',
-      total: 153,
-      pria: 81,
-      wanita: 78,
+      total: 148,
+      pria: 78,
+      wanita: 70,
       leader: 'Ketua RT 04',
       mainJobs: 'Buruh Tani/Perkebunan',
       ageCategories: [
