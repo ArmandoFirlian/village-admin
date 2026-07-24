@@ -25,28 +25,28 @@ const dashboardData = {
   rt: [
     {
       rt: 'RT 01',
-      total: 146,
-      pria: 67,
-      wanita: 89,
+      total: 197,
+      pria: 99,
+      wanita: 98,
       leader: 'Ketua RT 01',
-      mainJobs: 'Pertanian & UMKM',
+      mainJobs: 'Tuna Karya',
       ageCategories: [
-        { label: '0-5', value: 11 },
-        { label: '6-12', value: 18 },
-        { label: '13-17', value: 13 },
-        { label: '18-25', value: 18 },
-        { label: '26-45', value: 41 },
-        { label: '46-60', value: 24 },
-        { label: '61+', value: 9 }
+        { label: '0-5', value: 7 },
+        { label: '6-12', value: 21 },
+        { label: '13-17', value: 14 },
+        { label: '18-25', value: 26 },
+        { label: '26-45', value: 59 },
+        { label: '46-60', value: 51 },
+        { label: '61+', value: 19 }
       ],
       occupations: [
-        { label: 'Petani', value: 32 },
-        { label: 'Buruh', value: 18 },
-        { label: 'Pedagang', value: 14 },
-        { label: 'PNS', value: 6 },
-        { label: 'IRT', value: 24 },
-        { label: 'Pelajar/Mahasiswa', value: 22 },
-        { label: 'Lainnya', value: 18 }
+        { label: 'Petani', value: 49 },
+        { label: 'Buruh', value: 29 },
+        { label: 'Pedagang', value: 2 },
+        { label: 'PNS', value: 3 },
+        { label: 'IRT', value: 8 },
+        { label: 'Pelajar/Mahasiswa', value: 40 },
+        { label: 'Lainnya', value: 66 }
       ]
     },
     {
