@@ -161,7 +161,7 @@ const dashboardData = {
       leader: 'Ketua RT 06',
       mainJobs: 'Pertanian',
       ageCategories: [
-        { label: '0-5', value: 1  },
+        { label: '0-5', value: 1 },
         { label: '6-12', value: 14 },
         { label: '13-17', value: 7 },
         { label: '18-25', value: 14 },
