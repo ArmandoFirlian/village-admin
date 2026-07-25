@@ -414,6 +414,44 @@ function bindMapInteractions() {
   });
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Integrasi Klik Legenda RT -> Navigasi & Highlight Card RT
+    const legendRtItems = document.querySelectorAll('.legend-item-rt');
+    const rtSection = document.getElementById('section-rt'); // Pastikan ID kontainer RT sesuai
+
+    legendRtItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const rtNumber = item.getAttribute('data-rt');
+            
+            // Scroll halus ke bagian RT
+            if (rtSection) {
+                rtSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            // Memicu event klik atau aktif pada RT Card tertentu
+            const targetRtCard = document.querySelector(`.rt-card[data-rt="${rtNumber}"]`);
+            if (targetRtCard) {
+                targetRtCard.click(); // Jalankan fungsi select/active RT yang sudah ada
+            }
+        });
+    });
+
+    // 2. Integrasi Klik UMKM & Pasar -> Scroll Langsung ke Section UMKM
+    const umkmTargets = document.querySelectorAll('#legend-umkm, #legend-pasar');
+    const umkmSection = document.getElementById('section-umkm'); // Sesuaikan dengan ID section UMKM di HTML
+
+    umkmTargets.forEach(item => {
+        item.addEventListener('click', () => {
+            if (umkmSection) {
+                umkmSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+});
+
+
 renderSummary();
 renderGenderChart('gender-chart', dashboardData.pria, dashboardData.wanita);
 renderAgeChart('age-chart', dashboardData.ageCategories);
@@ -422,3 +460,6 @@ renderRtCards();
 renderRtFocusSummary();
 updateMapFocus();
 bindMapInteractions();
+
+// Tambahkan pemanggilan fungsi ini di paling bawah:
+bindLegendInteractions();
