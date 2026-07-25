@@ -415,31 +415,33 @@ function bindMapInteractions() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-
-    // 1. Integrasi Klik Legenda RT -> Navigasi & Highlight Card RT
+    // 1. Integrasi Klik Legenda RT -> Scroll & Highlight Card RT
     const legendRtItems = document.querySelectorAll('.legend-item-rt');
-    const rtSection = document.getElementById('section-rt'); // Pastikan ID kontainer RT sesuai
+    // Sesuaikan ID dengan HTML Anda (#rt)
+    const rtSection = document.getElementById('rt'); 
 
     legendRtItems.forEach(item => {
         item.addEventListener('click', () => {
-            const rtNumber = item.getAttribute('data-rt');
-            
-            // Scroll halus ke bagian RT
+            const rtNumber = item.getAttribute('data-rt'); // Mengambil angka, cth: "1"
+            const rtName = `RT 0${rtNumber}`; // Format menjadi "RT 01", "RT 02", dst.
+
+            // Scroll ke section pembagian RT
             if (rtSection) {
                 rtSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
 
-            // Memicu event klik atau aktif pada RT Card tertentu
-            const targetRtCard = document.querySelector(`.rt-card[data-rt="${rtNumber}"]`);
-            if (targetRtCard) {
-                targetRtCard.click(); // Jalankan fungsi select/active RT yang sudah ada
-            }
+            // Set RT aktif di data dan update tampilan
+            dashboardData.activeRt = rtName;
+            renderRtCards();
+            renderRtFocusSummary();
+            updateMapFocus();
         });
     });
 
-    // 2. Integrasi Klik UMKM & Pasar -> Scroll Langsung ke Section UMKM
+    // 2. Integrasi Klik UMKM & Pasar -> Scroll ke Section Wisata & UMKM
     const umkmTargets = document.querySelectorAll('#legend-umkm, #legend-pasar');
-    const umkmSection = document.getElementById('section-umkm'); // Sesuaikan dengan ID section UMKM di HTML
+    // Sesuaikan ID dengan HTML Anda (#wisata-umkm)
+    const umkmSection = document.getElementById('wisata-umkm'); 
 
     umkmTargets.forEach(item => {
         item.addEventListener('click', () => {
@@ -448,7 +450,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
 });
 
 
@@ -461,5 +462,4 @@ renderRtFocusSummary();
 updateMapFocus();
 bindMapInteractions();
 
-// Tambahkan pemanggilan fungsi ini di paling bawah:
-bindLegendInteractions();
+
