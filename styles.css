@@ -15,19 +15,17 @@
     box-sizing: border-box;
 }
 
-html, body {
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden; /* Mengunci scroll horizontal secara ketat */
     margin: 0;
     padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(180deg, #eff6ea 0%, #f8fbf6 100%);
     color: var(--text);
@@ -911,6 +909,14 @@ main {
 
 
 /* ==================== Legend Dot Colors ==================== */
+.legend-dot {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%; /* Membuat lingkaran (opsional) */
+    margin-right: 8px;
+    vertical-align: middle;
+}
 .legend-dot.rt-1 { background: #ffff00; }
 .legend-dot.rt-2 { background: #ff5500; }
 .legend-dot.rt-3 { background: #00ffff; }
