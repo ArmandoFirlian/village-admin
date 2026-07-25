@@ -12,15 +12,14 @@ const dashboardData = {
     { label: '46-60', value: 162 },
     { label: '61+', value: 99 }
   ],
-  occupations: [
-    { label: 'Petani', value: 190 },
-    { label: 'Buruh', value: 105 },
-    { label: 'Pedagang', value: 64 },
-    { label: 'PNS', value: 42 },
-    { label: 'Honorer', value: 35 },
-    { label: 'Pelajar/Mahasiswa', value: 126 },
-    { label: 'IRT', value: 130 },
-    { label: 'Lainnya', value: 132 }
+occupations: [
+    { label: 'Petani', value: 171 },
+    { label: 'Buruh', value: 156 },
+    { label: 'Pedagang', value: 72 },
+    { label: 'PNS', value: 16 },
+    { label: 'Pelajar/Mahasiswa', value: 157 },
+    { label: 'IRT', value: 35 },
+    { label: 'Lainnya', value: 319 }
   ],
   rt: [
     {
