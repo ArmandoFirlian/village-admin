@@ -111,18 +111,24 @@
           <p class="map-image-note">Peta wilayah Dusun Ngentak</p>
         </div>
 
-        <div class="panel legend-card">
+        <div class="legend-card panel">
           <h3>Legenda Peta</h3>
           <ul>
-            <li><span class="legend-dot rt-1"></span> RT 01</li>
-            <li><span class="legend-dot rt-2"></span> RT 02</li>
-            <li><span class="legend-dot rt-3"></span> RT 03</li>
-            <li><span class="legend-dot rt-4"></span> RT 04</li>
-            <li><span class="legend-dot rt-5"></span> RT 05</li>
-            <li><span class="legend-dot rt-6"></span> RT 06</li>
-            <li><span class="legend-dot sawah"></span> Sawah</li>
-            <li><span class="legend-dot ternak"></span> Peternakan</li>
-            <li><span class="legend-dot wisata"></span> Objek Wisata</li>
+<!-- Klik RT 1 s/d 6 -->
+              <li class="legend-item-rt" data-rt="1"><span class="legend-dot rt-1"></span> RT 01</li>
+              <li class="legend-item-rt" data-rt="2"><span class="legend-dot rt-2"></span> RT 02</li>
+              <li class="legend-item-rt" data-rt="3"><span class="legend-dot rt-3"></span> RT 03</li>
+              <li class="legend-item-rt" data-rt="4"><span class="legend-dot rt-4"></span> RT 04</li>
+              <li class="legend-item-rt" data-rt="5"><span class="legend-dot rt-5"></span> RT 05</li>
+              <li class="legend-item-rt" data-rt="6"><span class="legend-dot rt-6"></span> RT 06</li>
+
+        <!-- Fitur Wilayah -->
+              <li><span class="legend-dot sawah"></span> Area Sawah</li>
+              <li><span class="legend-dot ternak"></span> Area Peternakan</li>
+        
+        <!-- Klik UMKM (Langsung Scroll ke Section UMKM) -->
+              <li id="legend-umkm" data-target="#section-umkm"><span class="legend-dot umkm"></span> Sentra UMKM</li>
+              <li id="legend-pasar" data-target="#section-umkm"><span class="legend-dot pasar"></span> Pasar / Perdagangan</li>
           </ul>
         </div>
       </div>
