@@ -1338,6 +1338,12 @@ main {
     transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ==================== Profile Cards ==================== */
+
+.profile-card p {
+    text-align: justify;
+}
+
 /* ==================== Media Queries (Mobile Fixes) ==================== */
 
 @media (min-width: 768px) {
