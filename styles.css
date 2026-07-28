@@ -31,7 +31,7 @@ body {
     animation: fadeIn 0.8s ease-in-out;
 }
 
-/* ==================== Animations (Aman untuk Mobile) ==================== */
+/* ==================== Animations ==================== */
 
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -60,7 +60,6 @@ body {
     }
 }
 
-/* Mengurangi pergeseran X agar tidak meluap dari tepi layar HP */
 @keyframes slideInLeft {
     from {
         opacity: 0;
@@ -99,11 +98,6 @@ body {
     50% { opacity: 0.7; }
 }
 
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
 @keyframes glow {
     0%, 100% { box-shadow: 0 0 5px rgba(29, 111, 60, 0.3); }
     50% { box-shadow: 0 0 20px rgba(29, 111, 60, 0.6); }
@@ -114,22 +108,15 @@ body {
     to { width: var(--bar-width); }
 }
 
-@keyframes shimmer {
-    0% { background-position: -1000px 0; }
-    100% { background-position: 1000px 0; }
-}
-
 /* ==================== Sticky Navbar ==================== */
 
 .navbar-container {
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: #ffffff;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 9999;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .navbar {
@@ -170,7 +157,7 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: var(--text);
+    color: #2d3748 !important;
     font-weight: 600;
     font-size: 0.88rem;
     padding: 8px 14px;
@@ -207,7 +194,7 @@ body {
     z-index: 1;
     max-width: 800px;
     margin: 0 auto;
-    text-align: left; /* Seluruh konten Hero Rata Kiri */
+    text-align: left;
 }
 
 .eyebrow {
@@ -216,7 +203,16 @@ body {
     letter-spacing: 0.18em;
     font-size: 0.75rem;
     font-weight: 700;
+    color: var(--primary); /* Default gelap untuk di dalam kartu */
+}
+
+/* Khusus eyebrow & subtitle di dalam HERO banner */
+.hero .eyebrow {
     color: #b8d2c0;
+}
+
+.hero .subtitle {
+    color: #e8f3ea; /* Khusus Hero menggunakan warna terang */
 }
 
 h1 {
@@ -226,10 +222,11 @@ h1 {
     line-height: 1.2;
 }
 
+/* Default Subtitle / Paragraph Style */
 .subtitle {
     max-width: 760px;
-    color: #e8f3ea;
-    text-align: justify; /* Teks deskripsi rata kanan-kiri (justify) agar rapi */
+    color: var(--muted); /* Default warna teks gelap/gelap-sedang */
+    text-align: justify;
     line-height: 1.6;
     margin-bottom: 24px;
 }
@@ -239,7 +236,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
-    justify-content: flex-start; /* Badge rata kiri */
+    justify-content: flex-start;
     margin-top: 1.5rem;
 }
 
@@ -280,7 +277,8 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 16px;
 }
-/* ==================== Main Content ==================== */
+
+/* ==================== Main Content & Panels ==================== */
 
 main {
     width: 100%;
@@ -326,21 +324,31 @@ main {
     grid-column: 1 / -1;
 }
 
+/* FIX PERBAIKAN WARNA PANEL */
 .panel {
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 18px;
-    padding: 18px;
+    padding: 24px;
     box-shadow: var(--shadow);
     animation: slideUp 0.6s ease-out;
     transition: all 0.3s ease;
+    color: var(--text);
+}
+
+.panel h2, .panel h3 {
+    color: #111827;
+    margin-top: 0;
+}
+
+.panel p, .panel .subtitle {
+    color: #374151; /* Memaksa teks deskripsi dalam panel berwarna gelap jelas */
 }
 
 .panel:hover {
     transform: translateY(-3px);
     box-shadow: 0 25px 60px rgba(22, 43, 28, 0.12);
 }
-
 
 /* ==================== Charts ==================== */
 
@@ -356,15 +364,6 @@ main {
     gap: 10px;
     animation: slideInLeft 0.5s ease-out both;
 }
-
-.bar-row:nth-child(1) { animation-delay: 0.1s; }
-.bar-row:nth-child(2) { animation-delay: 0.2s; }
-.bar-row:nth-child(3) { animation-delay: 0.3s; }
-.bar-row:nth-child(4) { animation-delay: 0.4s; }
-.bar-row:nth-child(5) { animation-delay: 0.5s; }
-.bar-row:nth-child(6) { animation-delay: 0.6s; }
-.bar-row:nth-child(7) { animation-delay: 0.7s; }
-.bar-row:nth-child(8) { animation-delay: 0.8s; }
 
 .bar-label {
     font-size: 0.9rem;
@@ -539,6 +538,10 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
+.profile-card p {
+    text-align: justify;
+}
+
 /* ==================== Tourism & UMKM ==================== */
 
 .tourism-grid {
@@ -571,16 +574,19 @@ main {
     background: linear-gradient(180deg, rgba(14, 56, 34, 0) 0%, #174f2f 32%, #123d25 100%);
 }
 
+.tourism-card__content p {
+    color: #ffffff !important;
+}
+
 .tourism-card__content .eyebrow {
-    color: #cfe9d1;
+    color: #cfe9d1 !important;
 }
 
 .tourism-card__content .text-link {
     color: #fff;
 }
 
-/* ==================== Tourism & UMKM Directory ==================== */
-
+/* Directory */
 .directory-hero {
     padding-bottom: 48px;
 }
@@ -624,40 +630,6 @@ main {
     font-size: .9rem;
 }
 
-.empty-card {
-    display: grid;
-    place-items: center;
-    min-height: 260px;
-    border-style: dashed;
-    text-align: center;
-}
-
-.empty-card > span {
-    display: grid;
-    place-items: center;
-    width: 52px;
-    height: 52px;
-    margin-bottom: 4px;
-    color: var(--primary);
-    background: var(--primary-soft);
-    border-radius: 50%;
-    font-size: 1.6rem;
-}
-
-.empty-card h3,
-.empty-card p {
-    max-width: 420px;
-}
-
-.info-card ul {
-    padding-left: 20px;
-    color: var(--muted);
-}
-
-.info-card li + li {
-    margin-top: 10px;
-}
-
 .tourism-card__icon {
     display: grid;
     place-items: center;
@@ -680,11 +652,6 @@ main {
 
 .text-link:hover {
     text-decoration: underline;
-}
-
-.profile-card--muted {
-    background: linear-gradient(180deg, #f9faf6, #f3f8f1);
-    animation: slideUp 0.7s ease-out;
 }
 
 /* ==================== Map Section ==================== */
@@ -763,14 +730,16 @@ main {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 6px 0;
+    padding: 6px 8px;
     border-bottom: 1px dashed #dfe9d7;
-    animation: slideInLeft 0.4s ease-out both;
+    border-radius: 8px;
+    cursor: pointer;
     transition: all 0.2s ease;
 }
 
 .legend-card li:hover {
     transform: translateX(5px);
+    background-color: rgba(29, 111, 60, 0.08);
 }
 
 .legend-card li:last-child {
@@ -783,165 +752,11 @@ main {
     color: var(--muted);
 }
 
-/* ==================== Map SVG Styles ==================== */
-
-.map-name {
-    fill: #13331c;
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: 0.01em;
-}
-
-.map-name-sub {
-    fill: #43614c;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-.feature-area {
-    opacity: 0.85;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
-}
-
-.feature-sawah {
-    fill: #00ff00;
-    stroke: #00cc00;
-    stroke-width: 1.2;
-}
-
-.feature-peternakan {
-    fill: #ffaa00;
-    stroke: #cc8800;
-    stroke-width: 1.5;
-}
-    
-.feature-wisata {
-    fill: #ffe6b0;
-    stroke: #dda855;
-    stroke-width: 1.5;
-}
-
-.text-tag {
-    fill: #4b604c;
-    font-size: 12px;
-    font-weight: 700;
-}
-
-.road-main {
-    fill: none;
-    stroke: #7f8b83;
-    stroke-width: 10;
-    opacity: 0.8;
-    stroke-linecap: round;
-}
-
-.road-side {
-    fill: none;
-    stroke: #9ca59e;
-    stroke-width: 6;
-    opacity: 0.68;
-    stroke-linecap: round;
-}
-
-.road-branch {
-    fill: none;
-    stroke: #8d968f;
-    stroke-width: 5;
-    opacity: 0.6;
-    stroke-linecap: round;
-}
-
-.road-label {
-    fill: #6b766d;
-    font-size: 12px;
-    font-weight: 700;
-}
-
-.zone-note {
-    fill: #5a6e5f;
-    font-size: 11px;
-    font-weight: 700;
-}
-
-.house-block {
-    fill: #f2d9a4;
-    stroke: #a5732a;
-    stroke-width: 1.2;
-}
-
-.house-block--main {
-    fill: #efd19d;
-}
-
-.map-hill {
-    opacity: 0.75;
-    filter: drop-shadow(0 2px 3px rgba(22, 59, 34, 0.12));
-}
-
-.hill-a { fill: #cfe0b9; }
-.hill-b { fill: #b8d3a8; }
-
-.map-river {
-    fill: none;
-    stroke: #8fc3c7;
-    stroke-width: 3;
-    stroke-linecap: round;
-    opacity: 0.8;
-}
-
-.label {
-    fill: #163b22;
-    font-size: 18px;
-    font-weight: 800;
-    letter-spacing: 0.01em;
-}
-
-.small-label {
-    fill: #274e36;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.rt-shape {
-    stroke: #24482f;
-    stroke-width: 2.2;
-    opacity: 0.95;
-    stroke-linejoin: round;
-    transition: opacity 0.2s ease, transform 0.2s ease, stroke-width 0.2s ease;
-    cursor: pointer;
-}
-
-.rt-shape:hover {
-    transform: translateY(-1px);
-}
-
-.rt-shape.is-dim {
-    opacity: 0.24;
-}
-
-.rt-shape.is-active {
-    stroke: #0f4f2a;
-    stroke-width: 4.2;
-    filter: drop-shadow(0 4px 8px rgba(18, 62, 32, 0.25));
-}
-
-.rt-1 { fill: #ffff00; }
-.rt-2 { fill: #ff5500; }
-.rt-3 { fill: #00ffff; }
-.rt-4 { fill: #ff4580; }
-.rt-5 { fill: #5555ff; }
-.rt-6 { fill: #ffaaff; }
-
-
-
-/* ==================== Legend Dot Colors ==================== */
 .legend-dot {
     display: inline-block;
     width: 14px;
     height: 14px;
-    border-radius: 50%; /* Membuat lingkaran (opsional) */
+    border-radius: 50%;
     margin-right: 8px;
     vertical-align: middle;
 }
@@ -955,19 +770,6 @@ main {
 .legend-dot.ternak { background: #ffaa00; }
 .legend-dot.umkm { background: #aaffff; }
 .legend-dot.pasar { background: #fcffb2; }
-
-/* Tambahan Style untuk item Legenda yang Interaktif */
-.legend-card li {
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-    border-radius: 8px;
-    padding: 6px 8px;
-}
-
-.legend-card li:hover {
-    transform: translateX(5px);
-    background-color: rgba(29, 111, 60, 0.08);
-}
 
 /* ==================== Footer ==================== */
 
@@ -1366,13 +1168,7 @@ main {
     transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ==================== Profile Cards ==================== */
-
-.profile-card p {
-    text-align: justify;
-}
-
-/* ==================== Media Queries (Mobile Fixes) ==================== */
+/* ==================== Media Queries ==================== */
 
 @media (min-width: 768px) {
     .footer-container {
@@ -1400,17 +1196,6 @@ main {
 }
 
 @media (max-width: 640px) {
-    .main-nav {
-        align-items: flex-start;
-        flex-direction: column;
-        margin-bottom: 30px;
-    }
-
-    .main-nav__links {
-        justify-content: flex-start;
-        width: 100%;
-    }
-
     .hero {
         padding: 32px 16px 16px;
     }
@@ -1425,10 +1210,6 @@ main {
 
     .chart-grid {
         grid-template-columns: 1fr;
-    }
-
-    .chart-full-width {
-        grid-column: 1 / -1;
     }
 
     .rt-grid {
