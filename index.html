@@ -44,46 +44,60 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
-
 <body>
-  <header class="hero" id="beranda">
-    <nav class="main-nav" aria-label="Navigasi utama">
-      <a class="main-nav__brand" href="#beranda">Ngentak</a>
-      <div class="main-nav__links">
-        <a href="#profil-padukuhan">Profil Padukuhan</a>
-        <a href="#penduduk">Data Kependudukan</a>
-        <a href="#peta">Peta Wilayah</a>
-        <a href="#rt">Pembagian RT</a>
-        <a href="wisata-umkm.html">Wisata &amp; UMKM</a>
-      </div>
-    </nav>
-    <div class="hero__content">
-      <p class="eyebrow">Sistem Informasi Administrasi</p>
-      <h1>Padukuhan Ngentak Poncosari</h1>
-      <p class="subtitle">
-        Menyajikan ringkasan informasi mengenai Padukuhan Ngentak, Kalurahan Poncosari, Kapanewon Srandakan yang mencangkup data kependudukan dan peta wilayah. Informasi ini memberikan gambaran umum 
-        mengenai kondisi demografi, luas wilayah, pembagian RT, serta karakteristik geografis sebagai 
-        dasar penyelanggaraan administrasi dan pembangunan padukuhan.
-      </p>
-<!-- KODE BARU -->
-    <div class="hero__badges">
-      <span>📍 Poncosari, Bantul</span>
-      <span>🏘️ 6 RT Terintegrasi</span>
-      <span>🌾 Kawasan Agraris</span>
-      <span>📊 Administrasi Digital</span>
+  <!-- ===== 1. FIXED/STICKY NAVBAR ===== -->
+  <header class="navbar-container">
+    <div class="navbar">
+      <!-- Brand & Logo -->
+      <a href="#beranda" class="nav-brand">
+        <img src="favicon.ico" alt="Logo Padukuhan" class="nav-logo" />
+        <span class="brand-title">Padukuhan Ngentak</span>
+      </a>
+
+      <!-- Menu Navigasi Utama -->
+      <nav class="nav-menu" id="navMenu" aria-label="Navigasi utama">
+        <a href="#profil-padukuhan" class="nav-link">Profil</a>
+        <a href="#penduduk" class="nav-link">Data Kependudukan</a>
+        <a href="#peta" class="nav-link">Peta Wilayah</a>
+        <a href="#rt" class="nav-link">Pembagian RT</a>
+        <a href="wisata-umkm.html" class="nav-link">Wisata &amp; UMKM</a>
+      </nav>
+
+      <!-- Tombol Hamburger Mobile -->
+      <button class="hamburger-toggle" id="menuToggle" aria-label="Buka Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    <div class="hero__stats" id="top-summary"></div>
   </header>
 
+  <!-- ===== 2. HERO SECTION ===== -->
+  <section class="hero" id="beranda">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <span class="badge">Sistem Informasi Administrasi</span>
+      <h1>Padukuhan Ngentak Poncosari</h1>
+      <p class="subtitle">
+        Menyajikan ringkasan informasi mengenai Padukuhan Ngentak, Kalurahan Poncosari, Kapanewon Srandakan yang mencakup data kependudukan dan peta wilayah secara digital dan transparan.
+      </p>
+
+      <!-- Badges Informasi -->
+      <div class="hero__badges">
+        <span>📍 Poncosari, Bantul</span>
+        <span>🏘️ 6 RT Terintegrasi</span>
+        <span>🌾 Kawasan Agraris</span>
+        <span>📊 Administrasi Digital</span>
+      </div>
+
+      <!-- Container Statistik Dinamis (Diisi oleh script.js) -->
+      <div class="hero__stats" id="top-summary"></div>
+    </div>
+  </section>
+
+  <!-- ===== 3. KONTEN UTAMA ===== -->
   <main>
     <section class="section profile-layout" id="profil-padukuhan">
-      <article class="panel profile-card">
-        <p class="eyebrow">Profil Padukuhan</p>
-        <h2>Padukuhan Ngentak</h2>
-        <p>
-          Padukuhan Ngentak berada di wilayah Kalurahan Poncosari dengan denyut kehidupan yang kental akan nuansa agraris dan kemasyarakatan.
-          Sebagian besar warga di sini menggantungkan hidup dari sektor pertanian, peternakan, serta berbagai usaha lokal yang terus berkembang.
-        </p>
         <p>  
           Dengan wilayah yang terbagi ke dalam enam RT, potensi Ngentak tidak hanya terletak pada aktivitas ekonominya, tetapi juga daya tarik wisata alam yang terus dibenahi.
           Agar pengelolaan dusun berjalan lebih optimal, penataan administrasi berbasis digital, pemetaan wilayah yang akurat, serta pendataan penduduk menjadi fokus penting dalam mendukung kemajuan dan potensi dusun ke depannya.
