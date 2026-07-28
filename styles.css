@@ -325,12 +325,12 @@ main {
 }
 
 /* FIX PERBAIKAN WARNA PANEL */
+/* ==================== Panel / Card Layout Fix ==================== */
+
 .panel {
     background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    border-left: none;
-    border-right: none;
+    border: 1px solid var(--border); /* Border melingkar penuh */
+    border-radius: 20px;            /* Sudut kartu membulat rapi */
     padding: 32px 24px;
     box-shadow: var(--shadow);
     animation: slideUp 0.6s ease-out;
@@ -343,8 +343,22 @@ main {
     margin-top: 0;
 }
 
-.panel p, .panel .subtitle {
-    color: #374151; /* Memaksa teks deskripsi dalam panel berwarna gelap jelas */
+/* Teks Paragraf di dalam Panel mepet penuh ke kanan & rata kiri-kanan */
+.panel p, 
+.panel .subtitle {
+    color: #374151;
+    max-width: 100% !important; /* Memenuhi lebar kartu sampai ke kanan */
+    text-align: justify;        /* Rata kiri-kanan */
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+/* Default Subtitle (Khusus untuk luar panel/elemen biasa) */
+.subtitle {
+    color: var(--muted);
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 24px;
 }
 
 .panel:hover {
