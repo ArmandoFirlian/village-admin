@@ -407,15 +407,15 @@ function renderRtFocusSummary() {
         <div class="focus-grid">
             <div class="focus-metric">
                 <span>Total Jiwa</span>
-                <strong>${selected.total}</strong>
+                <strong data-target="${selected.total}">${selected.total}</strong>
             </div>
             <div class="focus-metric">
                 <span>Pria</span>
-                <strong>${selected.pria}</strong>
+                <strong data-target="${selected.pria}">${selected.pria}</strong>
             </div>
             <div class="focus-metric">
                 <span>Wanita</span>
-                <strong>${selected.wanita}</strong>
+                <strong data-target="${selected.wanita}">${selected.wanita}</strong>
             </div>
         </div>
         <div class="focus-detail-grid">
@@ -521,9 +521,9 @@ function setupScrollAnimations() {
                 // Trigger counter untuk angka di focus-metric
                 const numbers = entry.target.querySelectorAll('.focus-metric strong');
                 numbers.forEach(num => {
-                    const target = parseInt(num.textContent);
+                    // Ambil target dari atribut data-target (jika ada), jika tidak ada baru ambil dari textContent
+                    const target = parseInt(num.getAttribute('data-target') || num.textContent);
                     if (!isNaN(target) && target > 0) {
-                        num.textContent = '0';
                         animateNumber(num, target, 1200);
                     }
                 });
@@ -536,7 +536,6 @@ function setupScrollAnimations() {
 
     elements.forEach(el => observer.observe(el));
 }
-
 // ============================================================
 // EVENT LISTENERS GLOBAL
 // ============================================================
