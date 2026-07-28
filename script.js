@@ -1,6 +1,6 @@
 const dashboardData = {
-  totalPenduduk: 917,
-  pria: 463,
+  totalPenduduk: 918,
+  pria: 464,
   wanita: 454,
   activeRt: 'RT 01',
   ageCategories: [
@@ -9,11 +9,11 @@ const dashboardData = {
     { label: '13-17', value: 70 },
     { label: '18-25', value: 106 },
     { label: '26-45', value: 230 },
-    { label: '46-60', value: 162 },
+    { label: '46-60', value: 163 },
     { label: '61+', value: 99 }
   ],
 occupations: [
-    { label: 'Petani', value: 171 },
+    { label: 'Petani', value: 172 },
     { label: 'Buruh', value: 156 },
     { label: 'Pedagang', value: 72 },
     { label: 'PNS', value: 16 },
@@ -102,8 +102,8 @@ occupations: [
     },
     {
       rt: 'RT 04',
-      total: 148,
-      pria: 78,
+      total: 149,
+      pria: 79,
       wanita: 70,
       leader: 'Ketua RT 04',
       mainJobs: 'Buruh Tani/Perkebunan',
@@ -113,11 +113,11 @@ occupations: [
         { label: '13-17', value: 10 },
         { label: '18-25', value: 12 },
         { label: '26-45', value: 55 },
-        { label: '46-60', value: 33 },
+        { label: '46-60', value: 34 },
         { label: '61+', value: 20 }
       ],
       occupations: [
-        { label: 'Petani', value: 27 },
+        { label: 'Petani', value: 28 },
         { label: 'Buruh', value: 4 },
         { label: 'Pedagang', value: 29 },
         { label: 'PNS', value: 7 },
