@@ -108,6 +108,50 @@ body {
     to { width: var(--bar-width); }
 }
 
+/* ==================== Loading Spinner ==================== */
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeOut {
+    to { opacity: 0; visibility: hidden; }
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.hidden {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--border);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+#loading-screen p {
+    margin-top: 20px;
+    color: var(--muted);
+    font-weight: 600;
+}
 /* ==================== Sticky Navbar ==================== */
 
 .navbar-container {
@@ -1239,6 +1283,90 @@ main {
     max-width: 100% !important;
 }
 /* ==================== Media Queries ==================== */
+/* ==================== Chart Enhancements ==================== */
+
+/* Efek pulse pada bar saat hover */
+.bar-fill {
+    position: relative;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                filter 0.3s ease;
+}
+
+.bar-row:hover .bar-fill {
+    filter: brightness(1.15) drop-shadow(0 2px 8px rgba(29, 111, 60, 0.3));
+}
+
+/* Animasi muncul bergantian untuk setiap bar */
+.bar-row:nth-child(1) { animation-delay: 0.05s; }
+.bar-row:nth-child(2) { animation-delay: 0.10s; }
+.bar-row:nth-child(3) { animation-delay: 0.15s; }
+.bar-row:nth-child(4) { animation-delay: 0.20s; }
+.bar-row:nth-child(5) { animation-delay: 0.25s; }
+.bar-row:nth-child(6) { animation-delay: 0.30s; }
+.bar-row:nth-child(7) { animation-delay: 0.35s; }
+.bar-row:nth-child(8) { animation-delay: 0.40s; }
+
+/* Efek glow pada nilai angka */
+.bar-value {
+    animation: pulse 2s ease-in-out infinite;
+    transition: transform 0.2s ease;
+}
+
+.bar-row:hover .bar-value {
+    transform: scale(1.15);
+    color: #155a2e;
+}
+/* ==================== Ripple Button ==================== */
+
+.btn-ripple {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-ripple .ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: rippleAnim 0.7s ease-out forwards;
+    pointer-events: none;
+}
+
+@keyframes rippleAnim {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Contoh tombol dengan efek ripple */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover {
+    background: #155a2e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(29, 111, 60, 0.35);
+}
+
+.btn-primary:active {
+    transform: scale(0.96);
+}
 
 @media (min-width: 768px) {
     .footer-container {
