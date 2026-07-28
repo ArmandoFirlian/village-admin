@@ -46,31 +46,29 @@
 </head>
 <body>
   <!-- ===== 1. FIXED/STICKY NAVBAR ===== -->
-  <header class="navbar-container">
-    <div class="navbar">
-      <!-- Brand & Logo -->
-      <a href="#beranda" class="nav-brand">
-        <img src="favicon.ico" alt="Logo Padukuhan" class="nav-logo" />
-        <span class="brand-title">Padukuhan Ngentak</span>
-      </a>
+<!-- ===== FIXED NAVBAR ===== -->
+<header class="navbar-container">
+  <div class="navbar">
+    <a href="#beranda" class="nav-brand">
+      <img src="favicon.ico" alt="Logo Padukuhan" class="nav-logo" />
+      <span class="brand-title">Padukuhan Ngentak</span>
+    </a>
 
-      <!-- Menu Navigasi Utama -->
-      <nav class="nav-menu" id="navMenu" aria-label="Navigasi utama">
-        <a href="#profil-padukuhan" class="nav-link">Profil</a>
-        <a href="#penduduk" class="nav-link">Data Kependudukan</a>
-        <a href="#peta" class="nav-link">Peta Wilayah</a>
-        <a href="#rt" class="nav-link">Pembagian RT</a>
-        <a href="wisata-umkm.html" class="nav-link">Wisata &amp; UMKM</a>
-      </nav>
+    <nav class="nav-menu" id="navMenu">
+      <a href="#profil-padukuhan" class="nav-link">Profil</a>
+      <a href="#penduduk" class="nav-link">Data Kependudukan</a>
+      <a href="#peta" class="nav-link">Peta Wilayah</a>
+      <a href="#rt" class="nav-link">Pembagian RT</a>
+      <a href="wisata-umkm.html" class="nav-link">Wisata &amp; UMKM</a>
+    </nav>
 
-      <!-- Tombol Hamburger Mobile -->
-      <button class="hamburger-toggle" id="menuToggle" aria-label="Buka Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
+    <button class="hamburger-toggle" id="menuToggle" aria-label="Buka Menu">
+      <span>Peta w</span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
 
   <!-- ===== 2. HERO SECTION ===== -->
   <section class="hero" id="beranda">
@@ -83,12 +81,21 @@
       </p>
 
       <!-- Badges Informasi -->
-      <div class="hero__badges">
-        <span>📍 Poncosari, Bantul</span>
-        <span>🏘️ 6 RT Terintegrasi</span>
-        <span>🌾 Kawasan Agraris</span>
-        <span>📊 Administrasi Digital</span>
-      </div>
+<!-- Quick Links / Badges Interaktif -->
+    <div class="hero__badges">
+     <a href="#peta" class="hero-badge-link">
+      <span>🗺️ Peta Wilayah</span>
+     </a>
+     <a href="#rt" class="hero-badge-link">
+      <span>🏘️ Data per RT</span>
+     </a>
+     <a href="wisata-umkm.html#umkm" class="hero-badge-link">
+      <span>🏪 UMKM Lokal</span>
+     </a>
+     <a href="wisata-umkm.html#objek-wisata" class="hero-badge-link">
+      <span>🏖️ Objek Wisata</span>
+     </a>
+    </div>
 
       <!-- Container Statistik Dinamis (Diisi oleh script.js) -->
       <div class="hero__stats" id="top-summary"></div>
