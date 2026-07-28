@@ -1,172 +1,70 @@
-# 🏘️ Sistem Informasi Administrasi Padukuhan Ngentak
+# 🏘️ Sistem Informasi & Profil Padukuhan Ngentak
 
-Aplikasi web profesional untuk mengelola data administrasi, kependudukan, dan informasi geografis **Padukuhan Ngentak, Poncosari**.
+Aplikasi web interaktif dan responsif untuk menyajikan data statistik kependudukan, wilayah administrasi RT, peta interaktif, serta direktori potensi lokal (Wisata & UMKM) **Padukuhan Ngentak, Kalurahan Poncosari, Kapanewon Srandakan, Kabupaten Bantul**.
 
-## 📋 Daftar Isi
-
-- [Fitur](#fitur)
-- [Teknologi](#teknologi)
-- [Instalasi](#instalasi)
-- [Penggunaan](#penggunaan)
-- [Struktur Proyek](#struktur-proyek)
-- [Lisensi](#lisensi)
-
-## ✨ Fitur
-
-### Dashboard Utama
-- 📊 **Statistik Penduduk**: Total, jenis kelamin, kategori umur
-- 👥 **Data Lapisan RT**: Kategori per RT dengan detail lengkap
-- 📈 **Analisis Pekerjaan**: Distribusi pekerjaan penduduk
-
-### Profil & Informasi
-- 🏘️ **Profil Padukuhan**: Informasi lengkap Dusun Ngentak
-- 🗺️ **Peta Wilayah**: Visualisasi geografis dengan legenda RT
-- 👨‍🎓 **Profil KKN**: Dokumentasi program KKN
-
-### Visualisasi Data
-- 📊 Chart interaktif dengan data real-time
-- 🎨 UI/UX yang responsif dan modern
-- 📱 Mobile-friendly design
-
-## 🛠️ Teknologi
-
-| Kategori | Tools |
-|----------|-------|
-| **Frontend** | HTML5, CSS3, Vanilla JavaScript |
-| **Build Tool** | Vite |
-| **Code Quality** | ESLint, Prettier |
-| **Version Control** | Git & GitHub |
-
-## 📦 Instalasi
-
-### Prerequisites
-- Node.js v16+ ([Download](https://nodejs.org/))
-- npm atau yarn
-- Git
-
-### Step-by-Step
-
-```bash
-# Clone repository
-git clone https://github.com/ArmandoFirlian/village-admin.git
-cd village-admin
-
-# Install dependencies
-npm install
-
-# Setup development environment
-npm run dev
-
-# Build untuk production
-npm run build
-```
-
-## 🚀 Penggunaan
-
-### Development Mode
-```bash
-npm run dev
-```
-Aplikasi akan berjalan di `http://localhost:3000` dengan hot reload.
-
-### Production Build
-```bash
-npm run build
-```
-Output production tersimpan di folder `dist/`.
-
-### Preview Production Build
-```bash
-npm run preview
-```
-
-### Linting & Code Quality
-```bash
-# Check code quality
-npm run lint
-
-# Auto-fix issues
-npm run lint:fix
-```
-
-## 📁 Struktur Proyek
-
-```
-village-admin/
-├── src/
-│   ├── assets/
-│   │   ├── images/
-│   │   └── maps/
-│   ├── js/
-│   │   └── script.js        # Main JavaScript logic
-│   ├── css/
-│   │   └── styles.css       # Styling
-│   └── index.html           # Entry point
-├── public/
-│   ├── map.jpg              # Map visualization
-│   └── map-image.svg        # SVG map template
-├── dist/                    # Production build output
-├── package.json             # Dependencies & scripts
-├── vite.config.js          # Vite configuration
-├── .eslintrc.json          # ESLint rules
-├── .gitignore              # Git ignore rules
-└── README.md               # Documentation
-```
-
-## 📊 Data Dashboard
-
-### Statistik Utama
-- **Total Penduduk**: 824 orang
-- **Jumlah RT**: 6 (RT 01 - RT 06)
-- **Jenis Kelamin**: 412 Pria, 412 Wanita
-- **Kategori Umur**: 7 kategori (0-5, 6-12, 13-17, 18-25, 26-45, 46-60, 61+)
-- **Profesi Utama**: Petani, Buruh, Pedagang, PNS, IRT
-
-### Fitur RT
-Setiap RT memiliki data:
-- Jumlah penduduk per jenis kelamin
-- Distribusi umur
-- Kategori pekerjaan
-- Pemimpin RT
-- Pekerjaan utama
-
-## 🎯 Roadmap
-
-- [ ] Tambah login system
-- [ ] Database integration (MongoDB/MySQL)
-- [ ] Export data ke PDF/Excel
-- [ ] Mobile app (React Native)
-- [ ] Real-time data update
-- [ ] API backend (Node.js/Express)
-- [ ] Advanced analytics
-- [ ] Multi-language support
-
-## 🤝 Kontribusi
-
-Untuk berkontribusi:
-
-1. Fork repository
-2. Buat branch fitur (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push ke branch (`git push origin feature/AmazingFeature`)
-5. Buat Pull Request
-
-## 📝 Lisensi
-
-Project ini menggunakan lisensi **MIT**. Lihat file [LICENSE](LICENSE) untuk detail.
-
-## 👤 Author
-
-**Armando Firlian**
-- GitHub: [@ArmandoFirlian](https://github.com/ArmandoFirlian)
-- Location: Indonesia
-
-## 📧 Kontak & Support
-
-Untuk pertanyaan atau masalah:
-- Buka [GitHub Issues](https://github.com/ArmandoFirlian/village-admin/issues)
-- Email: armando@example.com
+🌐 **Live Demo:** [www.profil-padukuhan-ngentak.my.id](https://www.profil-padukuhan-ngentak.my.id/)
 
 ---
 
-**Made with ❤️ for Padukuhan Ngentak Poncosari**
+## 📋 Daftar Isi
+
+- [Fitur Utama](#-fitur-utama)
+- [Teknologi](#-teknologi)
+- [Struktur Proyek](#-struktur-proyek)
+- [Instalasi & Penggunaan](#-instalasi--penggunaan)
+- [Struktur Data Dashboard](#-struktur-data-dashboard)
+- [Kontribusi](#-kontribusi)
+- [Lisensi](#-lisensi)
+
+---
+
+## ✨ Fitur Utama
+
+### 📊 Dashboard Statistics
+* **Ringkasan Penduduk:** Menampilkan total populasi, rasio jenis kelamin (pria/wanita), dan jumlah RT secara statistik real-time dengan animasi counter.
+* **Visualisasi Demografi:**
+  * Chart rasio jenis kelamin interaktif (Radial Progress).
+  * Distribusi kategori umur penduduk (Column Chart).
+  * Analisis profesi/sektor pekerjaan utama warga (Horizontal Bar Chart).
+
+### 🗺️ Peta & Wilayah Administrasi (RT 01 - RT 06)
+* **Peta Interaktif:** Peta wilayah padukuhan dengan elemen SVG yang terhubung langsung dengan *state* wilayah RT.
+* **Detail RT Terpilih:** Menampilkan rincian data populasi, data pekerjaan, kategori umur, serta nama ketua RT secara dinamis saat kartu RT atau wilayah peta diklik.
+
+### 🏖️ Direktori Potensi Lokal (Wisata & UMKM)
+* **Destinasi Wisata:** Informasi objek wisata sekitar seperti *Pantai Baru* dan *Muara Pandansimo*.
+* **Katalog UMKM:** Wadah promosi usaha lokal, kerajinan, kuliner, dan jasa warga setempat.
+
+---
+
+## 🛠️ Teknologi
+
+| Sektor | Teknologi / Tools |
+| :--- | :--- |
+| **Frontend** | HTML5, CSS3 (Modern Flexbox & Grid), Vanilla JavaScript (ES6+) |
+| **Build Tool** | [Vite](https://vitejs.dev/) |
+| **Code Quality** | ESLint, Prettier |
+| **Deployment** | GitHub Pages / Custom Domain |
+
+---
+
+## 📁 Struktur Proyek
+
+```text
+village-admin/
+├── public/                  # Asset statis publik
+│   ├── favicon.ico          # Favicon website
+│   ├── map.jpg              # Peta acuan
+│   └── map-image.svg        # SVG overlay peta interaktif
+├── src/                     # Source code utama
+│   ├── assets/              # Gambar & media pendukung
+│   ├── css/
+│   │   └── styles.css       # Design & stylesheet utama
+│   └── js/
+│       ├── script.js        # Logika aplikasi, state render, & interaksi
+│       └── supabaseClient.js# Konfigurasi integrasi Supabase (opsional)
+├── index.html               # Halaman utama (Dashboard & Profil)
+├── wisata-umkm.html         # Halaman Direktori Wisata & UMKM
+├── package.json             # Manifest dependensi & skrip npm
+├── vite.config.js           # Konfigurasi Vite
+└── README.md                # Dokumentasi proyek
