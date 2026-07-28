@@ -1,465 +1,616 @@
+// ============================================================
+// DATA DASHBOARD
+// ============================================================
 const dashboardData = {
-  totalPenduduk: 918,
-  pria: 464,
-  wanita: 454,
-  activeRt: 'RT 01',
-  ageCategories: [
-    { label: '0-5', value: 58 },
-    { label: '6-12', value: 99 },
-    { label: '13-17', value: 70 },
-    { label: '18-25', value: 106 },
-    { label: '26-45', value: 230 },
-    { label: '46-60', value: 163 },
-    { label: '61+', value: 99 }
-  ],
-occupations: [
-    { label: 'Petani', value: 172 },
-    { label: 'Buruh', value: 156 },
-    { label: 'Pedagang', value: 72 },
-    { label: 'PNS', value: 16 },
-    { label: 'Pelajar/Mahasiswa', value: 157 },
-    { label: 'IRT', value: 35 },
-    { label: 'Lainnya', value: 319 }
-  ],
-  rt: [
-    {
-      rt: 'RT 01',
-      total: 197,
-      pria: 99,
-      wanita: 98,
-      leader: 'Ketua RT 01',
-      mainJobs: 'Tuna Karya',
-      ageCategories: [
-        { label: '0-5', value: 7 },
-        { label: '6-12', value: 21 },
-        { label: '13-17', value: 14 },
-        { label: '18-25', value: 26 },
-        { label: '26-45', value: 59 },
-        { label: '46-60', value: 51 },
-        { label: '61+', value: 19 }
-      ],
-      occupations: [
-        { label: 'Petani', value: 49 },
-        { label: 'Buruh', value: 29 },
-        { label: 'Pedagang', value: 2 },
-        { label: 'PNS', value: 3 },
-        { label: 'IRT', value: 8 },
-        { label: 'Pelajar/Mahasiswa', value: 40 },
-        { label: 'Lainnya', value: 66 }
-      ]
-    },
-    {
-      rt: 'RT 02',
-      total: 163,
-      pria: 83,
-      wanita: 80,
-      leader: 'Ketua RT 02',
-      mainJobs: 'Buruh Tani/Perkebunan',
-      ageCategories: [
-        { label: '0-5', value: 5 },
-        { label: '6-12', value: 9 },
-        { label: '13-17', value: 11 },
-        { label: '18-25', value: 15 },
-        { label: '26-45', value: 46 },
-        { label: '46-60', value: 43 },
-        { label: '61+', value: 34 }
-      ],
-      occupations: [
-        { label: 'Petani', value: 64 },
-        { label: 'Buruh', value: 16 },
-        { label: 'Pedagang', value: 6 },
-        { label: 'PNS', value: 1 },
-        { label: 'IRT', value: 5 },
-        { label: 'Pelajar/Mahasiswa', value: 27 },
-        { label: 'Lainnya', value: 44 }
-      ]
-    },
-    {
-      rt: 'RT 03',
-      total: 141,
-      pria: 68,
-      wanita: 73,
-      leader: 'Ketua RT 03',
-      mainJobs: 'Petani & rumah tangga',
-      ageCategories: [
-        { label: '0-5', value: 6 },
-        { label: '6-12', value: 17 },
-        { label: '13-17', value: 11 },
-        { label: '18-25', value: 16 },
-        { label: '26-45', value: 37 },
-        { label: '46-60', value: 30 },
-        { label: '61+', value: 24 }
-      ],
-      occupations: [
-        { label: 'Petani', value: 1 },
-        { label: 'Buruh', value: 58 },
-        { label: 'Pedagang', value: 14 },
-        { label: 'PNS', value: 0 },
-        { label: 'IRT', value: 3 },
-        { label: 'Pelajar/Mahasiswa', value: 19 },
-        { label: 'Lainnya', value: 46 }
-      ]
-    },
-    {
-      rt: 'RT 04',
-      total: 149,
-      pria: 79,
-      wanita: 70,
-      leader: 'Ketua RT 04',
-      mainJobs: 'Buruh Tani/Perkebunan',
-      ageCategories: [
-        { label: '0-5', value: 7 },
-        { label: '6-12', value: 16 },
-        { label: '13-17', value: 10 },
-        { label: '18-25', value: 12 },
-        { label: '26-45', value: 55 },
-        { label: '46-60', value: 34 },
-        { label: '61+', value: 20 }
-      ],
-      occupations: [
-        { label: 'Petani', value: 28 },
-        { label: 'Buruh', value: 4 },
-        { label: 'Pedagang', value: 29 },
-        { label: 'PNS', value: 7 },
-        { label: 'IRT', value: 3 },
-        { label: 'Pelajar/Mahasiswa', value: 23 },
-        { label: 'Lainnya', value: 67 }
-      ]
-    },
-    {
-      rt: 'RT 05',
-      total: 155,
-      pria: 80,
-      wanita: 75,
-      leader: 'Ketua RT 05',
-      mainJobs: 'Buruh Petani',
-      ageCategories: [
-        { label: '0-5', value: 9 },
-        { label: '6-12', value: 18 },
-        { label: '13-17', value: 9 },
-        { label: '18-25', value: 19 },
-        { label: '26-45', value: 36 },
-        { label: '46-60', value: 25 },
-        { label: '61+', value: 38 }
-      ],
-      occupations: [
-        { label: 'Petani', value: 1 },
-        { label: 'Buruh', value: 43 },
-        { label: 'Pedagang', value: 14 },
-        { label: 'PNS', value: 2 },
-        { label: 'IRT', value: 8 },
-        { label: 'Pelajar/Mahasiswa', value: 31 },
-        { label: 'Lainnya', value: 56 }
-      ]
-    },
-    {
-      rt: 'RT 06',
-      total: 114,
-      pria: 55,
-      wanita: 59,
-      leader: 'Ketua RT 06',
-      mainJobs: 'Pertanian',
-      ageCategories: [
-        { label: '0-5', value: 1 },
-        { label: '6-12', value: 14 },
-        { label: '13-17', value: 7 },
-        { label: '18-25', value: 14 },
-        { label: '26-45', value: 35 },
-        { label: '46-60', value: 24 },
-        { label: '61+', value: 19 }
-      ],
-      occupations: [
-        { label: 'Petani', value: 29 },
-        { label: 'Buruh', value: 6 },
-        { label: 'Pedagang', value: 7 },
-        { label: 'PNS', value: 3 },
-        { label: 'IRT', value: 8 },
-        { label: 'Pelajar/Mahasiswa', value: 17 },
-        { label: 'Lainnya', value: 40 }
-      ]
-    }
-  ]
+    totalPenduduk: 918,
+    pria: 464,
+    wanita: 454,
+    activeRt: 'RT 01',
+    ageCategories: [
+        { label: '0-5', value: 58 },
+        { label: '6-12', value: 99 },
+        { label: '13-17', value: 70 },
+        { label: '18-25', value: 106 },
+        { label: '26-45', value: 230 },
+        { label: '46-60', value: 163 },
+        { label: '61+', value: 99 }
+    ],
+    occupations: [
+        { label: 'Petani', value: 172 },
+        { label: 'Buruh', value: 156 },
+        { label: 'Pedagang', value: 72 },
+        { label: 'PNS', value: 16 },
+        { label: 'Pelajar/Mahasiswa', value: 157 },
+        { label: 'IRT', value: 35 },
+        { label: 'Lainnya', value: 319 }
+    ],
+    rt: [
+        {
+            rt: 'RT 01',
+            total: 197,
+            pria: 99,
+            wanita: 98,
+            leader: 'Ketua RT 01',
+            mainJobs: 'Tuna Karya',
+            ageCategories: [
+                { label: '0-5', value: 7 },
+                { label: '6-12', value: 21 },
+                { label: '13-17', value: 14 },
+                { label: '18-25', value: 26 },
+                { label: '26-45', value: 59 },
+                { label: '46-60', value: 51 },
+                { label: '61+', value: 19 }
+            ],
+            occupations: [
+                { label: 'Petani', value: 49 },
+                { label: 'Buruh', value: 29 },
+                { label: 'Pedagang', value: 2 },
+                { label: 'PNS', value: 3 },
+                { label: 'IRT', value: 8 },
+                { label: 'Pelajar/Mahasiswa', value: 40 },
+                { label: 'Lainnya', value: 66 }
+            ]
+        },
+        {
+            rt: 'RT 02',
+            total: 163,
+            pria: 83,
+            wanita: 80,
+            leader: 'Ketua RT 02',
+            mainJobs: 'Buruh Tani/Perkebunan',
+            ageCategories: [
+                { label: '0-5', value: 5 },
+                { label: '6-12', value: 9 },
+                { label: '13-17', value: 11 },
+                { label: '18-25', value: 15 },
+                { label: '26-45', value: 46 },
+                { label: '46-60', value: 43 },
+                { label: '61+', value: 34 }
+            ],
+            occupations: [
+                { label: 'Petani', value: 64 },
+                { label: 'Buruh', value: 16 },
+                { label: 'Pedagang', value: 6 },
+                { label: 'PNS', value: 1 },
+                { label: 'IRT', value: 5 },
+                { label: 'Pelajar/Mahasiswa', value: 27 },
+                { label: 'Lainnya', value: 44 }
+            ]
+        },
+        {
+            rt: 'RT 03',
+            total: 141,
+            pria: 68,
+            wanita: 73,
+            leader: 'Ketua RT 03',
+            mainJobs: 'Petani & rumah tangga',
+            ageCategories: [
+                { label: '0-5', value: 6 },
+                { label: '6-12', value: 17 },
+                { label: '13-17', value: 11 },
+                { label: '18-25', value: 16 },
+                { label: '26-45', value: 37 },
+                { label: '46-60', value: 30 },
+                { label: '61+', value: 24 }
+            ],
+            occupations: [
+                { label: 'Petani', value: 1 },
+                { label: 'Buruh', value: 58 },
+                { label: 'Pedagang', value: 14 },
+                { label: 'PNS', value: 0 },
+                { label: 'IRT', value: 3 },
+                { label: 'Pelajar/Mahasiswa', value: 19 },
+                { label: 'Lainnya', value: 46 }
+            ]
+        },
+        {
+            rt: 'RT 04',
+            total: 149,
+            pria: 79,
+            wanita: 70,
+            leader: 'Ketua RT 04',
+            mainJobs: 'Buruh Tani/Perkebunan',
+            ageCategories: [
+                { label: '0-5', value: 7 },
+                { label: '6-12', value: 16 },
+                { label: '13-17', value: 10 },
+                { label: '18-25', value: 12 },
+                { label: '26-45', value: 55 },
+                { label: '46-60', value: 34 },
+                { label: '61+', value: 20 }
+            ],
+            occupations: [
+                { label: 'Petani', value: 28 },
+                { label: 'Buruh', value: 4 },
+                { label: 'Pedagang', value: 29 },
+                { label: 'PNS', value: 7 },
+                { label: 'IRT', value: 3 },
+                { label: 'Pelajar/Mahasiswa', value: 23 },
+                { label: 'Lainnya', value: 67 }
+            ]
+        },
+        {
+            rt: 'RT 05',
+            total: 155,
+            pria: 80,
+            wanita: 75,
+            leader: 'Ketua RT 05',
+            mainJobs: 'Buruh Petani',
+            ageCategories: [
+                { label: '0-5', value: 9 },
+                { label: '6-12', value: 18 },
+                { label: '13-17', value: 9 },
+                { label: '18-25', value: 19 },
+                { label: '26-45', value: 36 },
+                { label: '46-60', value: 25 },
+                { label: '61+', value: 38 }
+            ],
+            occupations: [
+                { label: 'Petani', value: 1 },
+                { label: 'Buruh', value: 43 },
+                { label: 'Pedagang', value: 14 },
+                { label: 'PNS', value: 2 },
+                { label: 'IRT', value: 8 },
+                { label: 'Pelajar/Mahasiswa', value: 31 },
+                { label: 'Lainnya', value: 56 }
+            ]
+        },
+        {
+            rt: 'RT 06',
+            total: 114,
+            pria: 55,
+            wanita: 59,
+            leader: 'Ketua RT 06',
+            mainJobs: 'Pertanian',
+            ageCategories: [
+                { label: '0-5', value: 1 },
+                { label: '6-12', value: 14 },
+                { label: '13-17', value: 7 },
+                { label: '18-25', value: 14 },
+                { label: '26-45', value: 35 },
+                { label: '46-60', value: 24 },
+                { label: '61+', value: 19 }
+            ],
+            occupations: [
+                { label: 'Petani', value: 29 },
+                { label: 'Buruh', value: 6 },
+                { label: 'Pedagang', value: 7 },
+                { label: 'PNS', value: 3 },
+                { label: 'IRT', value: 8 },
+                { label: 'Pelajar/Mahasiswa', value: 17 },
+                { label: 'Lainnya', value: 40 }
+            ]
+        }
+    ]
 };
 
-function renderSummary() {
-  const summary = document.getElementById('top-summary');
-  const cards = [
-    { label: 'Total Penduduk', value: dashboardData.totalPenduduk },
-    { label: 'Total Pria', value: dashboardData.pria },
-    { label: 'Total Wanita', value: dashboardData.wanita },
-    { label: 'Jumlah RT', value: dashboardData.rt.length }
-  ];
+// ============================================================
+// FUNGSI UTILITY
+// ============================================================
 
-  summary.innerHTML = cards
-    .map(
-      (item) => `
-        <article class="stat-card">
-          <h3>${item.label}</h3>
-          <strong>${item.value}</strong>
-        </article>
-      `
-    )
-    .join('');
+/** Animasi angka berhitung dari 0 ke target */
+function animateNumber(element, target, duration = 2000) {
+    let start = 0;
+    const step = target / (duration / 16);
+    let current = 0;
+
+    const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        element.textContent = Math.floor(current);
+    }, 16);
 }
 
-function getOccupationIcon(label) {
-  const petaniIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 8a7 7 0 0 1-9 10Z"/><path d="M9 22v-4"/><path d="M8 12c.5-2.5 1.5-4.5 4-5"/></svg>`;
-  const buruhIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 5 4 4M20.5 7.5a2.12 2.12 0 1 1-3 3L3.5 24H2v-1.5L16.5 8.5l4-4Z"/></svg>`;
-  const pedagangIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>`;
-  const pnsIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>`;
-  const honorerIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>`;
-  const pelajarIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>`;
-  const irtIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`;
-  const lainnyaIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>`;
-
-  switch (label) {
-    case 'Petani': return petaniIcon;
-    case 'Buruh': return buruhIcon;
-    case 'Pedagang': return pedagangIcon;
-    case 'PNS': return pnsIcon;
-    case 'Honorer': return honorerIcon;
-    case 'Pelajar/Mahasiswa': return pelajarIcon;
-    case 'IRT': return irtIcon;
-    default: return lainnyaIcon;
-  }
-}
-
-function renderGenderChart(containerId, pria, wanita) {
-  const container = document.getElementById(containerId);
-  const total = pria + wanita;
-  const pctPria = ((pria / total) * 100).toFixed(1);
-  const pctWanita = ((wanita / total) * 100).toFixed(1);
-  const dashOffsetPria = 100 - parseFloat(pctPria);
-  const dashOffsetWanita = 100 - parseFloat(pctWanita);
-
-  container.innerHTML = `
-    <div class="gender-card-unique pria-card">
-      <div class="gender-card-info">
-        <h4>Pria</h4>
-        <strong>${pria} <small>jiwa</small></strong>
-        <span>${pctPria}%</span>
-      </div>
-      <div class="gender-card-visual">
-        <svg class="radial-progress-svg" viewBox="0 0 36 36">
-          <circle class="radial-progress-bg" cx="18" cy="18" r="15.9155"></circle>
-          <circle class="radial-progress-bar" cx="18" cy="18" r="15.9155" stroke-dasharray="100" stroke-dashoffset="${dashOffsetPria}"></circle>
-        </svg>
-        <div class="gender-icon-overlay">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="10" cy="14" r="6"></circle>
-            <path d="M14 10l6-6M14 4h6v6"></path>
-          </svg>
-        </div>
-      </div>
-    </div>
-    <div class="gender-card-unique wanita-card">
-      <div class="gender-card-info">
-        <h4>Wanita</h4>
-        <strong>${wanita} <small>jiwa</small></strong>
-        <span>${pctWanita}%</span>
-      </div>
-      <div class="gender-card-visual">
-        <svg class="radial-progress-svg" viewBox="0 0 36 36">
-          <circle class="radial-progress-bg" cx="18" cy="18" r="15.9155"></circle>
-          <circle class="radial-progress-bar" cx="18" cy="18" r="15.9155" stroke-dasharray="100" stroke-dashoffset="${dashOffsetWanita}"></circle>
-        </svg>
-        <div class="gender-icon-overlay">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="8" r="6"></circle>
-            <path d="M12 14v8M9 18h6"></path>
-          </svg>
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-function renderAgeChart(containerId, data) {
-  const container = document.getElementById(containerId);
-  const max = Math.max(...data.map((item) => item.value));
-
-  container.innerHTML = data
-    .map((item, index) => {
-      const pctHeight = (item.value / max) * 100;
-      return `
-        <div class="age-column">
-          <span class="age-bar-value-static">${item.value}</span>
-          <div class="age-bar-track">
-            <div class="age-bar-fill" style="height: ${pctHeight}%; transition-delay: ${index * 0.08}s;">
-              <div class="age-bar-tooltip">${item.value} jiwa</div>
-            </div>
-          </div>
-          <div class="age-label-text">${item.label} Th</div>
-        </div>
-      `;
-    })
-    .join('');
-}
-
-function renderOccupationChart(containerId, data) {
-  const container = document.getElementById(containerId);
-  const max = Math.max(...data.map((item) => item.value));
-
-  container.innerHTML = data
-    .map((item, index) => {
-      const pctWidth = (item.value / max) * 100;
-      const icon = getOccupationIcon(item.label);
-      return `
-        <div class="occupation-row" style="animation-delay: ${index * 0.06}s">
-          <div class="occ-icon-wrapper">
-            ${icon}
-          </div>
-          <div class="occ-info-bar">
-            <div class="occ-text-container">
-              <span class="occ-title">${item.label}</span>
-              <span class="occ-value-text">${item.value} jiwa</span>
-            </div>
-            <div class="occ-bar-track">
-              <div class="occ-bar-fill" style="width: ${pctWidth}%; transition-delay: ${index * 0.06 + 0.1}s;"></div>
-            </div>
-          </div>
-        </div>
-      `;
-    })
-    .join('');
-}
-
-function renderRtCards() {
-  const rtCards = document.getElementById('rt-cards');
-  rtCards.innerHTML = dashboardData.rt
-    .map(
-      (item) => `
-        <article class="rt-card ${item.rt === dashboardData.activeRt ? 'is-active' : ''}" data-rt="${item.rt}">
-          <p class="eyebrow">Wilayah Administrasi</p>
-          <h3>${item.rt}</h3>
-          <p><strong>${item.total}</strong> jiwa</p>
-          <p>Pria: ${item.pria} • Wanita: ${item.wanita}</p>
-          <div class="rt-meta">
-            <span class="pill">${item.leader}</span>
-            <span class="pill">${item.mainJobs}</span>
-          </div>
-        </article>
-      `
-    )
-    .join('');
-
-  rtCards.querySelectorAll('.rt-card').forEach((card) => {
-    card.addEventListener('click', () => {
-      dashboardData.activeRt = card.dataset.rt;
-      renderRtCards();
-      renderRtFocusSummary();
-      updateMapFocus();
+/** Trigger counter untuk semua kartu statistik */
+function triggerCounters() {
+    const statCards = document.querySelectorAll('.stat-card strong');
+    statCards.forEach((card, index) => {
+        const target = parseInt(card.textContent);
+        if (!isNaN(target)) {
+            card.textContent = '0';
+            setTimeout(() => {
+                animateNumber(card, target, 1500);
+            }, index * 200);
+        }
     });
-  });
 }
 
+/** Dapatkan icon SVG berdasarkan label pekerjaan */
+function getOccupationIcon(label) {
+    const icons = {
+        'Petani': `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 8a7 7 0 0 1-9 10Z"/><path d="M9 22v-4"/><path d="M8 12c.5-2.5 1.5-4.5 4-5"/></svg>`,
+        'Buruh': `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 5 4 4M20.5 7.5a2.12 2.12 0 1 1-3 3L3.5 24H2v-1.5L16.5 8.5l4-4Z"/></svg>`,
+        'Pedagang': `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>`,
+        'PNS': `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>`,
+        'Honorer': `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>`,
+        'Pelajar/Mahasiswa': `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>`,
+        'IRT': `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`
+    };
+    return icons[label] || `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>`;
+}
+
+// ============================================================
+// FUNGSI RENDER
+// ============================================================
+
+/** Render kartu statistik di hero */
+function renderSummary() {
+    const summary = document.getElementById('top-summary');
+    if (!summary) return;
+
+    const cards = [
+        { label: 'Total Penduduk', value: dashboardData.totalPenduduk },
+        { label: 'Total Pria', value: dashboardData.pria },
+        { label: 'Total Wanita', value: dashboardData.wanita },
+        { label: 'Jumlah RT', value: dashboardData.rt.length }
+    ];
+
+    summary.innerHTML = cards
+        .map(item => `
+            <article class="stat-card">
+                <h3>${item.label}</h3>
+                <strong>${item.value}</strong>
+            </article>
+        `)
+        .join('');
+}
+
+/** Render chart jenis kelamin */
+function renderGenderChart(containerId, pria, wanita) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const total = pria + wanita;
+    const pctPria = ((pria / total) * 100).toFixed(1);
+    const pctWanita = ((wanita / total) * 100).toFixed(1);
+    const dashOffsetPria = 100 - parseFloat(pctPria);
+    const dashOffsetWanita = 100 - parseFloat(pctWanita);
+
+    container.innerHTML = `
+        <div class="gender-card-unique pria-card">
+            <div class="gender-card-info">
+                <h4>Pria</h4>
+                <strong>${pria} <small>jiwa</small></strong>
+                <span>${pctPria}%</span>
+            </div>
+            <div class="gender-card-visual">
+                <svg class="radial-progress-svg" viewBox="0 0 36 36">
+                    <circle class="radial-progress-bg" cx="18" cy="18" r="15.9155"></circle>
+                    <circle class="radial-progress-bar" cx="18" cy="18" r="15.9155" stroke-dasharray="100" stroke-dashoffset="${dashOffsetPria}"></circle>
+                </svg>
+                <div class="gender-icon-overlay">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="10" cy="14" r="6"></circle>
+                        <path d="M14 10l6-6M14 4h6v6"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="gender-card-unique wanita-card">
+            <div class="gender-card-info">
+                <h4>Wanita</h4>
+                <strong>${wanita} <small>jiwa</small></strong>
+                <span>${pctWanita}%</span>
+            </div>
+            <div class="gender-card-visual">
+                <svg class="radial-progress-svg" viewBox="0 0 36 36">
+                    <circle class="radial-progress-bg" cx="18" cy="18" r="15.9155"></circle>
+                    <circle class="radial-progress-bar" cx="18" cy="18" r="15.9155" stroke-dasharray="100" stroke-dashoffset="${dashOffsetWanita}"></circle>
+                </svg>
+                <div class="gender-icon-overlay">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="6"></circle>
+                        <path d="M12 14v8M9 18h6"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+/** Render chart umur */
+function renderAgeChart(containerId, data) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const max = Math.max(...data.map(item => item.value));
+
+    container.innerHTML = data
+        .map((item, index) => {
+            const pctHeight = (item.value / max) * 100;
+            return `
+                <div class="age-column">
+                    <span class="age-bar-value-static">${item.value}</span>
+                    <div class="age-bar-track">
+                        <div class="age-bar-fill" style="height: ${pctHeight}%; transition-delay: ${index * 0.08}s;">
+                            <div class="age-bar-tooltip">${item.value} jiwa</div>
+                        </div>
+                    </div>
+                    <div class="age-label-text">${item.label} Th</div>
+                </div>
+            `;
+        })
+        .join('');
+}
+
+/** Render chart pekerjaan */
+function renderOccupationChart(containerId, data) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const max = Math.max(...data.map(item => item.value));
+
+    container.innerHTML = data
+        .map((item, index) => {
+            const pctWidth = (item.value / max) * 100;
+            const icon = getOccupationIcon(item.label);
+            return `
+                <div class="occupation-row" style="animation-delay: ${index * 0.06}s">
+                    <div class="occ-icon-wrapper">${icon}</div>
+                    <div class="occ-info-bar">
+                        <div class="occ-text-container">
+                            <span class="occ-title">${item.label}</span>
+                            <span class="occ-value-text">${item.value} jiwa</span>
+                        </div>
+                        <div class="occ-bar-track">
+                            <div class="occ-bar-fill" style="width: ${pctWidth}%; transition-delay: ${index * 0.06 + 0.1}s;"></div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        })
+        .join('');
+}
+
+/** Render kartu RT */
+function renderRtCards() {
+    const rtCards = document.getElementById('rt-cards');
+    if (!rtCards) return;
+
+    rtCards.innerHTML = dashboardData.rt
+        .map(item => `
+            <article class="rt-card ${item.rt === dashboardData.activeRt ? 'is-active' : ''}" data-rt="${item.rt}">
+                <p class="eyebrow">Wilayah Administrasi</p>
+                <h3>${item.rt}</h3>
+                <p><strong>${item.total}</strong> jiwa</p>
+                <p>Pria: ${item.pria} • Wanita: ${item.wanita}</p>
+                <div class="rt-meta">
+                    <span class="pill">${item.leader}</span>
+                    <span class="pill">${item.mainJobs}</span>
+                </div>
+            </article>
+        `)
+        .join('');
+
+    // Event listener untuk klik kartu RT
+    rtCards.querySelectorAll('.rt-card').forEach(card => {
+        card.addEventListener('click', () => {
+            dashboardData.activeRt = card.dataset.rt;
+            refreshAll();
+        });
+    });
+}
+
+/** Render detail RT yang dipilih */
 function renderRtFocusSummary() {
-  const selected = dashboardData.rt.find((item) => item.rt === dashboardData.activeRt) || dashboardData.rt[0];
-  const summary = document.getElementById('rt-focus-summary');
+    const summary = document.getElementById('rt-focus-summary');
+    if (!summary) return;
 
-  summary.innerHTML = `
-    <h3>${selected.rt}</h3>
-    <p>${selected.leader} • ${selected.mainJobs}</p>
-    <div class="focus-grid">
-      <div class="focus-metric">
-        <span>Total Jiwa</span>
-        <strong>${selected.total}</strong>
-      </div>
-      <div class="focus-metric">
-        <span>Pria</span>
-        <strong>${selected.pria}</strong>
-      </div>
-      <div class="focus-metric">
-        <span>Wanita</span>
-        <strong>${selected.wanita}</strong>
-      </div>
-    </div>
-    <div class="focus-detail-grid">
-      <div class="focus-list">
-        <h4>Pekerjaan</h4>
-        <ul>
-          ${selected.occupations
-      .map((job) => `<li><span>${job.label}</span><strong>${job.value}</strong></li>`)
-      .join('')}
-        </ul>
-      </div>
-      <div class="focus-list">
-        <h4>Kategori Umur</h4>
-        <ul>
-          ${selected.ageCategories
-      .map((age) => `<li><span>${age.label}</span><strong>${age.value}</strong></li>`)
-      .join('')}
-        </ul>
-      </div>
-    </div>
-  `;
+    const selected = dashboardData.rt.find(item => item.rt === dashboardData.activeRt) || dashboardData.rt[0];
+
+    summary.innerHTML = `
+        <h3>${selected.rt}</h3>
+        <p>${selected.leader} • ${selected.mainJobs}</p>
+        <div class="focus-grid">
+            <div class="focus-metric">
+                <span>Total Jiwa</span>
+                <strong>${selected.total}</strong>
+            </div>
+            <div class="focus-metric">
+                <span>Pria</span>
+                <strong>${selected.pria}</strong>
+            </div>
+            <div class="focus-metric">
+                <span>Wanita</span>
+                <strong>${selected.wanita}</strong>
+            </div>
+        </div>
+        <div class="focus-detail-grid">
+            <div class="focus-list">
+                <h4>Pekerjaan</h4>
+                <ul>
+                    ${selected.occupations.map(job => `<li><span>${job.label}</span><strong>${job.value}</strong></li>`).join('')}
+                </ul>
+            </div>
+            <div class="focus-list">
+                <h4>Kategori Umur</h4>
+                <ul>
+                    ${selected.ageCategories.map(age => `<li><span>${age.label}</span><strong>${age.value}</strong></li>`).join('')}
+                </ul>
+            </div>
+        </div>
+    `;
 }
 
+/** Update highlight pada peta */
 function updateMapFocus() {
-  document.querySelectorAll('.rt-shape').forEach((shape) => {
-    const isActive = shape.dataset.rt === dashboardData.activeRt;
-    shape.classList.toggle('is-active', isActive);
-    shape.classList.toggle('is-dim', !isActive);
-  });
+    document.querySelectorAll('.rt-shape').forEach(shape => {
+        const isActive = shape.dataset.rt === dashboardData.activeRt;
+        shape.classList.toggle('is-active', isActive);
+        shape.classList.toggle('is-dim', !isActive);
+    });
 }
+
+// ============================================================
+// FUNGSI REFRESH SEMUA
+// ============================================================
+
+function refreshAll() {
+    renderSummary();
+    renderGenderChart('gender-chart', dashboardData.pria, dashboardData.wanita);
+    renderAgeChart('age-chart', dashboardData.ageCategories);
+    renderOccupationChart('occupation-chart', dashboardData.occupations);
+    renderRtCards();
+    renderRtFocusSummary();
+    updateMapFocus();
+    setTimeout(triggerCounters, 300);
+}
+
+// ============================================================
+// INTERAKSI MAP
+// ============================================================
 
 function bindMapInteractions() {
-  document.querySelectorAll('.rt-shape').forEach((shape) => {
-    shape.addEventListener('click', () => {
-      dashboardData.activeRt = shape.dataset.rt;
-      renderRtCards();
-      renderRtFocusSummary();
-      updateMapFocus();
+    document.querySelectorAll('.rt-shape').forEach(shape => {
+        shape.addEventListener('click', () => {
+            dashboardData.activeRt = shape.dataset.rt;
+            refreshAll();
+        });
     });
-  });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Integrasi Klik Legenda RT -> Scroll & Highlight Card RT
+// ============================================================
+// INTERAKSI LEGENDA
+// ============================================================
+
+function bindLegendInteractions() {
+    // Klik legenda RT -> scroll ke section RT
     const legendRtItems = document.querySelectorAll('.legend-item-rt');
-    // Sesuaikan ID dengan HTML Anda (#rt)
-    const rtSection = document.getElementById('rt'); 
+    const rtSection = document.getElementById('rt');
 
     legendRtItems.forEach(item => {
         item.addEventListener('click', () => {
-            const rtNumber = item.getAttribute('data-rt'); // Mengambil angka, cth: "1"
-            const rtName = `RT 0${rtNumber}`; // Format menjadi "RT 01", "RT 02", dst.
+            const rtNumber = item.getAttribute('data-rt');
+            const rtName = `RT 0${rtNumber}`;
 
-            // Scroll ke section pembagian RT
             if (rtSection) {
                 rtSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
 
-            // Set RT aktif di data dan update tampilan
             dashboardData.activeRt = rtName;
-            renderRtCards();
-            renderRtFocusSummary();
-            updateMapFocus();
+            refreshAll();
         });
     });
 
-    // 2. Integrasi Klik UMKM & Pasar -> Scroll ke Section Wisata & UMKM
-    const umkmTargets = document.querySelectorAll('#legend-umkm, #legend-pasar');
-    // Sesuaikan ID dengan HTML Anda (#wisata-umkm)
-    const umkmSection = document.getElementById('wisata-umkm'); 
-
-    umkmTargets.forEach(item => {
+    // Klik legenda UMKM/Pasar -> scroll ke section wisata
+    const umkmSection = document.getElementById('wisata-umkm');
+    document.querySelectorAll('#legend-umkm, #legend-pasar').forEach(item => {
         item.addEventListener('click', () => {
             if (umkmSection) {
                 umkmSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
     });
+}
+
+// ============================================================
+// ANIMASI SCROLL (INTERSECTION OBSERVER)
+// ============================================================
+
+function setupScrollAnimations() {
+    const elements = document.querySelectorAll('.panel, .rt-card, .focus-metric, .focus-list');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+
+                // Trigger counter untuk angka di focus-metric
+                const numbers = entry.target.querySelectorAll('.focus-metric strong');
+                numbers.forEach(num => {
+                    const target = parseInt(num.textContent);
+                    if (!isNaN(target) && target > 0) {
+                        num.textContent = '0';
+                        animateNumber(num, target, 1200);
+                    }
+                });
+            }
+        });
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    elements.forEach(el => observer.observe(el));
+}
+
+// ============================================================
+// EVENT LISTENERS GLOBAL
+// ============================================================
+
+/** Hilangkan loading screen */
+window.addEventListener('load', function() {
+    const loader = document.getElementById('loading-screen');
+    if (loader) {
+        setTimeout(() => loader.classList.add('hidden'), 500);
+    }
 });
 
+/** Scroll progress bar */
+window.addEventListener('scroll', function() {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const progressBar = document.getElementById('scrollProgress');
+    if (progressBar) {
+        progressBar.style.width = scrolled + '%';
+    }
+});
 
-renderSummary();
-renderGenderChart('gender-chart', dashboardData.pria, dashboardData.wanita);
-renderAgeChart('age-chart', dashboardData.ageCategories);
-renderOccupationChart('occupation-chart', dashboardData.occupations);
-renderRtCards();
-renderRtFocusSummary();
-updateMapFocus();
-bindMapInteractions();
+/** Back to top button */
+const backToTop = document.getElementById('backToTop');
+if (backToTop) {
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTop.classList.add('visible');
+            backToTop.classList.add('show');
+        } else {
+            backToTop.classList.remove('visible');
+            backToTop.classList.remove('show');
+        }
+    });
 
+    backToTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
 
+/** Ripple effect untuk tombol */
+document.querySelectorAll('.btn-primary, .btn-ripple, .hero-badge-link, .text-link').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        if (this.querySelector('.ripple-effect')) return;
+
+        const ripple = document.createElement('span');
+        ripple.className = 'ripple-effect';
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+        ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+        this.style.position = 'relative';
+        this.style.overflow = 'hidden';
+        this.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 700);
+    });
+});
+
+// ============================================================
+// INISIALISASI
+// ============================================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Render semua data
+    refreshAll();
+
+    // Setup scroll animations
+    setupScrollAnimations();
+
+    // Bind interaksi map & legenda
+    bindMapInteractions();
+    bindLegendInteractions();
+
+    console.log('🚀 Sistem Informasi Padukuhan Ngentak siap!');
+});
