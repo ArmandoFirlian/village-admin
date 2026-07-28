@@ -137,6 +137,21 @@ body {
     animation: slideDown 0.8s ease-out;
 }
 
+/* Atur batas ukuran logo di navbar */
+.nav-logo {
+  width: 32px;         /* Lebar logo */
+  height: 32px;        /* Tinggi logo */
+  object-fit: contain; /* Memastikan rasio logo tidak gepeng */
+  display: block;
+}
+
+/* Pastikan container brand rapi secara vertikal */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .main-nav {
     max-width: 1100px;
     margin: 0 auto 42px;
