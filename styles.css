@@ -221,13 +221,44 @@ h1 {
     text-align: justify; /* Tambahkan baris ini */
 }
 
+/* Styling Container Badges */
 .hero__badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.5rem;
 }
 
+/* Styling Link/Badge Klik */
+.hero-badge-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hero-badge-link span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+/* Efek Hover saat Kursor Diatas Badge */
+.hero-badge-link:hover span {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: #ffd700; /* Warna emas/kuning aksen */
+  color: #ffd700;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
 .hero__badges span {
     background: rgba(255, 255, 255, 0.14);
     padding: 8px 12px;
