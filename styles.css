@@ -191,9 +191,11 @@ body {
     background: rgba(255, 255, 255, 0.16);
 }
 
-.hero__content {
-    max-width: 1100px;
-    margin: 0 auto;
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 750px;
+  text-align: left; /* Teks dibuat rata kiri */
 }
 
 .eyebrow {
@@ -226,7 +228,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  justify-content: center;
+  justify-content: flex-content;
   margin-top: 1.5rem;
 }
 
