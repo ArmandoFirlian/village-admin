@@ -16,13 +16,13 @@
   <meta name="theme-color" content="#1d6f3c" />
   <link rel="canonical" href="https://profil-padukuhan-ngentak.my.id/">
 
-  <!-- ===== Geo Tags (Lokasi Poncosari, Bantul, DIY) ===== -->
+  <!-- ===== Geo Tags ===== -->
   <meta name="geo.region" content="ID-YO" />
   <meta name="geo.placename" content="Padukuhan Ngentak, Poncosari, Bantul, Daerah Istimewa Yogyakarta" />
   <meta name="geo.position" content="-7.9950;110.2500" />
   <meta name="ICBM" content="-7.9950, 110.2500" />
 
-  <!-- ===== Open Graph (Facebook, WhatsApp, LinkedIn) ===== -->
+  <!-- ===== Open Graph ===== -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://profil-padukuhan-ngentak.my.id/" />
   <meta property="og:site_name" content="Administrasi Padukuhan Ngentak" />
@@ -44,74 +44,80 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
+
 <body>
+
   <!-- ===== 1. FIXED/STICKY NAVBAR ===== -->
-<!-- ===== FIXED NAVBAR ===== -->
-<header class="navbar-container">
-  <div class="navbar">
-    <a href="#beranda" class="nav-brand">
-      <img src="favicon.ico" alt="Logo Padukuhan" class="nav-logo" />
-      <span class="brand-title">Padukuhan Ngentak</span>
-    </a>
+  <header class="navbar-container">
+    <div class="navbar">
+      <a href="#beranda" class="nav-brand">
+        <img src="favicon.ico" alt="Logo Padukuhan" class="nav-logo" />
+        <span class="brand-title">Padukuhan Ngentak</span>
+      </a>
 
-    <nav class="nav-menu" id="navMenu">
-      <a href="#profil-padukuhan" class="nav-link">Profil</a>
-      <a href="#penduduk" class="nav-link">Data Kependudukan</a>
-      <a href="#peta" class="nav-link">Peta Wilayah</a>
-      <a href="#rt" class="nav-link">Pembagian RT</a>
-      <a href="wisata-umkm.html" class="nav-link">Wisata &amp; UMKM</a>
-    </nav>
+      <nav class="nav-menu" id="navMenu">
+        <a href="#profil-padukuhan" class="nav-link">Profil</a>
+        <a href="#penduduk" class="nav-link">Data Kependudukan</a>
+        <a href="#peta" class="nav-link">Peta Wilayah</a>
+        <a href="#rt" class="nav-link">Pembagian RT</a>
+        <a href="wisata-umkm.html" class="nav-link">Wisata &amp; UMKM</a>
+      </nav>
 
-    <button class="hamburger-toggle" id="menuToggle" aria-label="Buka Menu">
-      <span>Peta w</span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-</header>
+      <button class="hamburger-toggle" id="menuToggle" aria-label="Buka Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
 
   <!-- ===== 2. HERO SECTION ===== -->
   <section class="hero" id="beranda">
     <div class="hero__overlay"></div>
     <div class="hero__content">
-      <span class="badge">Sistem Informasi Administrasi</span>
+      <p class="eyebrow">Sistem Informasi Administrasi</p>
       <h1>Padukuhan Ngentak Poncosari</h1>
       <p class="subtitle">
         Menyajikan ringkasan informasi mengenai Padukuhan Ngentak, Kalurahan Poncosari, Kapanewon Srandakan yang mencakup data kependudukan dan peta wilayah secara digital dan transparan.
       </p>
 
-      <!-- Badges Informasi -->
-<!-- Quick Links / Badges Interaktif -->
-    <div class="hero__badges">
-     <a href="#peta" class="hero-badge-link">
-      <span>🗺️ Peta Wilayah</span>
-     </a>
-     <a href="#rt" class="hero-badge-link">
-      <span>🏘️ Data per RT</span>
-     </a>
-     <a href="wisata-umkm.html#umkm" class="hero-badge-link">
-      <span>🏪 UMKM Lokal</span>
-     </a>
-     <a href="wisata-umkm.html#objek-wisata" class="hero-badge-link">
-      <span>🏖️ Objek Wisata</span>
-     </a>
-    </div>
+      <!-- Quick Links / Badges Interaktif -->
+      <div class="hero__badges">
+        <a href="#peta" class="hero-badge-link">
+          <span>🗺️ Peta Wilayah</span>
+        </a>
+        <a href="#rt" class="hero-badge-link">
+          <span>🏘️ Data per RT</span>
+        </a>
+        <a href="wisata-umkm.html#umkm" class="hero-badge-link">
+          <span>🏪 UMKM Lokal</span>
+        </a>
+        <a href="wisata-umkm.html#objek-wisata" class="hero-badge-link">
+          <span>🏖️ Objek Wisata</span>
+        </a>
+      </div>
 
-      <!-- Container Statistik Dinamis (Diisi oleh script.js) -->
+      <!-- Container Statistik Dinamis -->
       <div class="hero__stats" id="top-summary"></div>
     </div>
   </section>
 
   <!-- ===== 3. KONTEN UTAMA ===== -->
   <main>
+
+    <!-- Section Profil (Tag diperbaiki) -->
     <section class="section profile-layout" id="profil-padukuhan">
-        <p>  
-          Dengan wilayah yang terbagi ke dalam enam RT, potensi Ngentak tidak hanya terletak pada aktivitas ekonominya, tetapi juga daya tarik wisata alam yang terus dibenahi.
+      <article class="panel">
+        <p class="eyebrow">Profil Padukuhan</p>
+        <h2>Gambaran Umum</h2>
+        <p class="subtitle">
+          Dengan wilayah yang terbagi ke dalam enam RT, potensi Ngentak tidak hanya terletak pada aktivitas ekonominya, tetapi juga daya tarik wisata alam yang terus dibenahi. 
           Agar pengelolaan dusun berjalan lebih optimal, penataan administrasi berbasis digital, pemetaan wilayah yang akurat, serta pendataan penduduk menjadi fokus penting dalam mendukung kemajuan dan potensi dusun ke depannya.
         </p>
       </article>
     </section>
 
+    <!-- Section Peta -->
     <section class="section" id="peta">
       <div class="section-heading">
         <div>
@@ -135,26 +141,24 @@
         <div class="legend-card panel">
           <h3>Legenda Peta</h3>
           <ul>
-<!-- Klik RT 1 s/d 6 -->
-              <li class="legend-item-rt" data-rt="1"><span class="legend-dot rt-1"></span> RT 01</li>
-              <li class="legend-item-rt" data-rt="2"><span class="legend-dot rt-2"></span> RT 02</li>
-              <li class="legend-item-rt" data-rt="3"><span class="legend-dot rt-3"></span> RT 03</li>
-              <li class="legend-item-rt" data-rt="4"><span class="legend-dot rt-4"></span> RT 04</li>
-              <li class="legend-item-rt" data-rt="5"><span class="legend-dot rt-5"></span> RT 05</li>
-              <li class="legend-item-rt" data-rt="6"><span class="legend-dot rt-6"></span> RT 06</li>
+            <li class="legend-item-rt" data-rt="1"><span class="legend-dot rt-1"></span> RT 01</li>
+            <li class="legend-item-rt" data-rt="2"><span class="legend-dot rt-2"></span> RT 02</li>
+            <li class="legend-item-rt" data-rt="3"><span class="legend-dot rt-3"></span> RT 03</li>
+            <li class="legend-item-rt" data-rt="4"><span class="legend-dot rt-4"></span> RT 04</li>
+            <li class="legend-item-rt" data-rt="5"><span class="legend-dot rt-5"></span> RT 05</li>
+            <li class="legend-item-rt" data-rt="6"><span class="legend-dot rt-6"></span> RT 06</li>
 
-        <!-- Fitur Wilayah -->
-              <li><span class="legend-dot sawah"></span> Area Sawah</li>
-              <li><span class="legend-dot ternak"></span> Area Peternakan</li>
-        
-        <!-- Klik UMKM (Langsung Scroll ke Section UMKM) -->
-              <li id="legend-umkm" data-target="#section-umkm"><span class="legend-dot umkm"></span> Sentra UMKM</li>
-              <li id="legend-pasar" data-target="#section-umkm"><span class="legend-dot pasar"></span> Pasar / Perdagangan</li>
+            <li><span class="legend-dot sawah"></span> Area Sawah</li>
+            <li><span class="legend-dot ternak"></span> Area Peternakan</li>
+
+            <li id="legend-umkm" data-target="#section-umkm"><span class="legend-dot umkm"></span> Sentra UMKM</li>
+            <li id="legend-pasar" data-target="#section-umkm"><span class="legend-dot pasar"></span> Pasar / Perdagangan</li>
           </ul>
         </div>
       </div>
     </section>
 
+    <!-- Section Penduduk -->
     <section class="section" id="penduduk">
       <div class="section-heading">
         <div>
@@ -164,19 +168,16 @@
       </div>
 
       <div class="chart-grid">
-        <!-- Pekerjaan Chart (Full Width Row) -->
         <article class="panel chart-full-width">
           <h3>Pekerjaan</h3>
           <div id="occupation-chart" class="occupation-container"></div>
         </article>
 
-        <!-- Jenis Kelamin Chart (Left Column) -->
         <article class="panel">
           <h3>Jenis Kelamin</h3>
           <div id="gender-chart" class="gender-container"></div>
         </article>
 
-        <!-- Kategori Umur Chart (Right Column) -->
         <article class="panel">
           <h3>Kategori Umur</h3>
           <div id="age-chart" class="age-container"></div>
@@ -184,6 +185,7 @@
       </div>
     </section>
 
+    <!-- Section RT -->
     <section class="section" id="rt">
       <div class="section-heading">
         <div>
@@ -198,6 +200,7 @@
       </div>
     </section>
 
+    <!-- Section Wisata & UMKM -->
     <section class="section" id="wisata-umkm">
       <div class="section-heading">
         <div>
@@ -225,11 +228,12 @@
       </div>
     </section>
 
-
   </main>
-   <footer class="main-footer">
+
+  <!-- ===== 4. FOOTER ===== -->
+  <footer class="main-footer">
     <div class="footer-container">
-      <!-- Kolom Kiri: Brand Profile -->
+      <!-- Kolom Kiri -->
       <div class="footer-brand-section">
         <div class="footer-logo-title">
           <svg class="footer-icon-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -239,12 +243,11 @@
           <h3 class="footer-title">Padukuhan Ngentak</h3>
         </div>
         <p class="footer-description">
-          Portal informasi resmi Padukuhan Ngentak. 
-          Menampilkan potensi wilayah, berita, dan layanan masyarakat desa.
+          Portal informasi resmi Padukuhan Ngentak. Menampilkan potensi wilayah, berita, dan layanan masyarakat desa.
         </p>
       </div>
 
-      <!-- Kolom Kanan: Hubungi Kami -->
+      <!-- Kolom Kanan -->
       <div class="footer-contact-section">
         <h3 class="footer-heading">Hubungi Kami</h3>
         <ul class="footer-contact-list">
@@ -277,12 +280,10 @@
       </div>
     </div>
 
-    <!-- Garis Pembatas & Copyright -->
     <div class="footer-bottom">
       <p>&copy; 2026 Padukuhan Ngentak. Seluruh hak cipta dilindungi.</p>
     </div>
   </footer>
-
 
   <script type="module" src="/script.js"></script>
 </body>
