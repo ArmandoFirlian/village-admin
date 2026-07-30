@@ -25,12 +25,19 @@ body {
     overflow-x: hidden; /* Mengunci scroll horizontal secara ketat */
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     background: linear-gradient(180deg, #eff6ea 0%, #f8fbf6 100%);
     color: var(--text);
     animation: fadeIn 0.8s ease-in-out;
 }
 
+/* Styling Font Judul & Sub-judul */
+h1, h2, h3, h4, h5, h6, 
+.nav-brand, 
+.footer-title, 
+.footer-heading {
+    font-family: 'Montserrat', sans-serif;
+}
 /* ==================== Animations ==================== */
 
 @keyframes fadeIn {
