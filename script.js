@@ -597,10 +597,39 @@ document.querySelectorAll('.btn-primary, .btn-ripple, .hero-badge-link, .text-li
 });
 
 // ============================================================
+// MOBILE MENU TOGGLE
+// ============================================================
+
+function setupMobileMenu() {
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (menuToggle && navMenu) {
+        // Event listener klik tombol hamburger
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('is-active');
+            navMenu.classList.toggle('is-active');
+        });
+
+        // Tutup menu otomatis saat link diklik
+        navMenu.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('is-active');
+                navMenu.classList.remove('is-active');
+            });
+        });
+    }
+}
+
+// ============================================================
 // INISIALISASI
 // ============================================================
 
 document.addEventListener('DOMContentLoaded', function() {
+
+    // Navigasi Mobile Menu
+    setupMobileMenu();
+
     // Render semua data
     refreshAll();
 
