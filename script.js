@@ -57,7 +57,7 @@ const dashboardData = {
             pria: 83,
             wanita: 80,
             leader: 'Ketua RT 02',
-            mainJobs: 'Buruh Tani/Perkebunan',
+            mainJobs: 'Mujiman',
             ageCategories: [
                 { label: '0-5', value: 5 },
                 { label: '6-12', value: 9 },
