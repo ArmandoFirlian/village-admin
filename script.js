@@ -31,7 +31,7 @@ const dashboardData = {
             pria: 99,
             wanita: 98,
             leader: 'Ketua RT 01',
-            mainJobs: 'Tuna Karya',
+            mainJobs: 'Suwarjo',
             ageCategories: [
                 { label: '0-5', value: 7 },
                 { label: '6-12', value: 21 },
@@ -83,7 +83,7 @@ const dashboardData = {
             pria: 68,
             wanita: 73,
             leader: 'Ketua RT 03',
-            mainJobs: 'Petani & rumah tangga',
+            mainJobs: 'Wahyu Dwi Ranto',
             ageCategories: [
                 { label: '0-5', value: 6 },
                 { label: '6-12', value: 17 },
@@ -109,7 +109,7 @@ const dashboardData = {
             pria: 79,
             wanita: 70,
             leader: 'Ketua RT 04',
-            mainJobs: 'Buruh Tani/Perkebunan',
+            mainJobs: 'Murjiman',
             ageCategories: [
                 { label: '0-5', value: 7 },
                 { label: '6-12', value: 16 },
@@ -135,7 +135,7 @@ const dashboardData = {
             pria: 80,
             wanita: 75,
             leader: 'Ketua RT 05',
-            mainJobs: 'Buruh Petani',
+            mainJobs: 'Suyoto Raharjo',
             ageCategories: [
                 { label: '0-5', value: 9 },
                 { label: '6-12', value: 18 },
@@ -161,7 +161,7 @@ const dashboardData = {
             pria: 55,
             wanita: 59,
             leader: 'Ketua RT 06',
-            mainJobs: 'Pertanian',
+            mainJobs: 'Murjiman',
             ageCategories: [
                 { label: '0-5', value: 1 },
                 { label: '6-12', value: 14 },
