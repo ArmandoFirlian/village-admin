@@ -845,10 +845,10 @@ main {
 .main-footer {
     background-color: #2b542c;
     color: #e2ecc8;
-    padding: 48px 20px 24px;
+    padding: 28px 20px 16px; /* Dikurangi dari 48px 20px 24px */
     font-size: 0.9rem;
-    line-height: 1.7;
-    margin-top: 50px;
+    line-height: 1.5; /* Dikurangi dari 1.7 */
+    margin-top: 40px;
     width: 100%;
 }
 
@@ -857,32 +857,32 @@ main {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px; /* Dikurangi dari 40px */
 }
 
 .footer-brand-section {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 10px; /* Dikurangi dari 16px */
 }
 
 .footer-logo-title {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .footer-icon-leaf {
-    width: 34px;
-    height: 34px;
+    width: 28px; /* Dikurangi sedikit dari 34px */
+    height: 28px;
     color: #ffffff;
     background-color: rgba(255, 255, 255, 0.12);
-    padding: 6px;
+    padding: 5px;
     border-radius: 50%;
 }
 
 .footer-title {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: #ffffff;
     margin: 0;
@@ -900,10 +900,10 @@ main {
 }
 
 .footer-heading {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: #ffffff;
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0; /* Dikurangi margin bawah dari 20px ke 10px */
     position: relative;
 }
 
@@ -913,21 +913,21 @@ main {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 10px; /* Dikurangi dari 18px */
 }
 
 .footer-contact-list li {
     display: flex;
     align-items: flex-start;
-    gap: 14px;
+    gap: 10px;
 }
 
 .contact-icon {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     color: #ffffff;
     flex-shrink: 0;
-    margin-top: 4px;
+    margin-top: 3px;
 }
 
 .contact-text {
@@ -936,8 +936,8 @@ main {
 
 .footer-bottom {
     max-width: 1100px;
-    margin: 40px auto 0;
-    padding-top: 24px;
+    margin: 20px auto 0; /* Dikurangi dari 40px ke 20px */
+    padding-top: 14px;  /* Dikurangi dari 24px ke 14px */
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     text-align: center;
 }
