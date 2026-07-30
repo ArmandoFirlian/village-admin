@@ -899,6 +899,10 @@ main {
 .footer-contact-section {
     display: flex;
     flex-direction: column;
+    /* Mendorong kolom kontak ke paling kanan pada layar desktop */
+    margin-left: auto; 
+    /* Membatasi lebar agar tetap rapi */
+    max-width: 300px; 
 }
 
 .footer-heading {
