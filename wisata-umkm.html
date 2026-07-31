@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <!-- 1. NAVBAR DIPISAH DI KELUARKAN DARI HERO (Pake class navbar-container) -->
+  <!-- 1. NAVBAR -->
   <div class="navbar-container">
     <nav class="navbar" aria-label="Navigasi utama">
       <a class="nav-brand" href="index.html">
@@ -27,17 +27,18 @@
     </nav>
   </div>
 
-  <!-- 2. HERO HEADER (Sekarang bersih tanpa ketumpukan navbar) -->
-<header class="hero directory-hero">
-  <div class="hero__content">
-    <p class="eyebrow">Direktori Potensi Lokal</p>
-    <h1>Wisata &amp; UMKM Padukuhan Ngentak</h1>
-    <p class="subtitle">Jelajahi keindahan alam, pesona pantai, serta ragam produk unggulan kreasi warga lokal Padukuhan Ngentak.</p>
-  </div>
-</header>
+  <!-- 2. HERO HEADER -->
+  <header class="hero directory-hero">
+    <div class="hero__content">
+      <p class="eyebrow">Direktori Potensi Lokal</p>
+      <h1>Wisata &amp; UMKM Padukuhan Ngentak</h1>
+      <p class="subtitle">Jelajahi keindahan alam, pesona pantai, serta ragam produk unggulan kreasi warga lokal Padukuhan Ngentak.</p>
+    </div>
+  </header>
 
   <!-- 3. MAIN CONTENT -->
   <main>
+    <!-- SEKSI OBJEK WISATA -->
     <section class="section" id="objek-wisata">
       <div class="section-heading">
         <div>
@@ -64,38 +65,80 @@
             <p>Wisata muara sungai dan pantai dengan pemandangan keindahan alam serta kawasan konservasi penyu dan spot pemancingan.</p>
             <p class="card-location">&#128205; Ngentak, Poncosari, Srandakan, Bantul</p>
           </div>
-        </article>     
+        </article>      
       </div>
     </section>
 
+    <!-- SEKSI UMKM LOKAL -->
     <section class="section" id="umkm">
       <div class="section-heading">
         <div>
           <p class="eyebrow">Usaha Warga</p>
-          <h2>UMKM Lokal</h2>
+          <h2>Kuliner &amp; UMKM Pantai Baru</h2>
         </div>
       </div>
       <div class="directory-grid">
-        <article class="panel empty-card">
-          <span aria-hidden="true">&#127978;</span>
-          <h3>Katalog UMKM segera hadir</h3>
-          <p>Usaha makanan, kerajinan, jasa, pertanian, dan produk lokal warga akan ditampilkan di sini.</p>
+        
+        <!-- UMKM 1: Gethuk Goreng -->
+        <article class="panel destination-card">
+          <img src="assets/gethuk.jpg" alt="Gethuk Goreng" class="destination-card__image" />
+          <div class="destination-card__body">
+            <span class="category-label">Oleh-Oleh Khas</span>
+            <h3>Gethuk Goreng Pantai Baru</h3>
+            <p>Jajanan tradisional berbahan singkong pilihan yang digoreng keemasan[cite: 1]. Memiliki tekstur renyah di luar dan lembut di dalam dengan cita rasa manis gurih otentik yang terjaga lintas generasi[cite: 1]. Cocok untuk oleh-oleh[cite: 1].</p>
+            <p class="card-location">&#128205; Kawasan Wisata Pantai Baru, Ngentak</p>
+          </div>
         </article>
-        <article class="panel info-card">
-          <p class="eyebrow">Data yang Dikumpulkan</p>
-          <h3>Agar mudah dicari pengunjung</h3>
-          <ul>
-            <li>Nama usaha atau objek wisata</li>
-            <li>Foto, alamat, dan deskripsi singkat</li>
-            <li>Kontak WhatsApp atau media sosial</li>
-            <li>Produk, fasilitas, dan jam operasional</li>
-          </ul>
+
+        <!-- UMKM 2: Ikan Bakar -->
+        <article class="panel destination-card">
+          <img src="assets/ikanbkr.png" alt="Ikan Bakar" class="destination-card__image" />
+          <div class="destination-card__body">
+            <span class="category-label">Kuliner Utama</span>
+            <h3>Ikan Bakar Rempah Pesisir</h3>
+            <p>Olahan ikan segar hasil tangkapan laut dengan racikan bumbu rempah pilihan yang dibakar sempurna[cite: 1]. Disajikan lengkap bersama sambal pedas dan lalapan segar yang menggugah selera[cite: 1].</p>
+            <p class="card-location">&#128205; Warung Kuliner Pantai Baru, Ngentak</p>
+          </div>
         </article>
+
+        <!-- UMKM 3: Ikan Goreng -->
+        <article class="panel destination-card">
+          <img src="assets/ikangrg.jpg" alt="Ikan Goreng" class="destination-card__image" />
+          <div class="destination-card__body">
+            <span class="category-label">Kuliner Utama</span>
+            <h3>Ikan Goreng Renyah</h3>
+            <p>Hidangan khas dari ikan segar yang digoreng hingga garing dan renyah dengan marinasi bumbu sederhana[cite: 1]. Nikmat disajikan hangat bersama sambal khas dan lalapan segar[cite: 1].</p>
+            <p class="card-location">&#128205; Warung Kuliner Pantai Baru, Ngentak</p>
+          </div>
+        </article>
+
+        <!-- UMKM 4: Udang & Cumi Crispy -->
+        <article class="panel destination-card">
+          <img src="assets/cumdang.jpg" alt="Udang dan Cumi Crispy" class="destination-card__image" />
+          <div class="destination-card__body">
+            <span class="category-label">Olahan Seafood</span>
+            <h3>Udang &amp; Cumi Crispy</h3>
+            <p>Sajian seafood segar dari udang dan cumi yang dibalut tepung berbumbu gurih lalu digoreng krispi[cite: 1]. Disajikan hangat dengan cocolan sambal, favorit seluruh kalangan wisatawan[cite: 1].</p>
+            <p class="card-location">&#128205; Warung Kuliner Pantai Baru, Ngentak</p>
+          </div>
+        </article>
+
+        <!-- UMKM 5: Seafood Tumpah -->
+        <article class="panel destination-card">
+          <img src="assets/sifud.jpg" alt="Seafood Tumpah" class="destination-card__image" />
+          <div class="destination-card__body">
+            <span class="category-label">Paket Spesial</span>
+            <h3>Seafood Tumpah Pantai Baru</h3>
+            <p>Hidangan laut porsi melimpah berisi aneka seafood segar seperti kerang, cumi, dan udang dipadu jagung manis[cite: 1]. Disiram saus bumbu spesial dengan sensasi gurih, pedas, dan segar[cite: 1].</p>
+            <p class="card-location">&#128205; Warung Kuliner Pantai Baru, Ngentak</p>
+          </div>
+        </article>
+
       </div>
     </section>
   </main>
 
-  <!-- ===== 4. FOOTER ===== -->
+  <!-- 4. FOOTER -->
   <footer class="main-footer">
     <div class="footer-container">
       <!-- Kolom Kiri -->
