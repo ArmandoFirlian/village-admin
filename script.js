@@ -131,9 +131,9 @@ const dashboardData = {
         },
         {
             rt: 'RT 05',
-            total: 155,
-            pria: 80,
-            wanita: 75,
+            total: 165,
+            pria: 84,
+            wanita: 81,
             leader: 'Ketua RT 05',
             mainJobs: 'Suyoto Raharjo',
             ageCategories: [
@@ -147,12 +147,12 @@ const dashboardData = {
             ],
             occupations: [
                 { label: 'Petani', value: 1 },
-                { label: 'Buruh', value: 43 },
+                { label: 'Buruh', value: 44 },
                 { label: 'Pedagang', value: 14 },
-                { label: 'PNS', value: 2 },
-                { label: 'IRT', value: 8 },
+                { label: 'PNS', value: 3 },
+                { label: 'IRT', value: 9 },
                 { label: 'Pelajar/Mahasiswa', value: 31 },
-                { label: 'Lainnya', value: 56 }
+                { label: 'Lainnya', value: 59 }
             ]
         },
         {
