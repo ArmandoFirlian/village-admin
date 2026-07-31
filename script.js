@@ -27,6 +27,7 @@ const dashboardData = {
     rt: [
         {
             rt: 'RT 01',
+            kk: 60,
             total: 197,
             pria: 99,
             wanita: 98,
@@ -53,6 +54,7 @@ const dashboardData = {
         },
         {
             rt: 'RT 02',
+            kk: 57,
             total: 163,
             pria: 83,
             wanita: 80,
@@ -79,6 +81,7 @@ const dashboardData = {
         },
         {
             rt: 'RT 03',
+            kk: 50,
             total: 141,
             pria: 68,
             wanita: 73,
@@ -105,6 +108,7 @@ const dashboardData = {
         },
         {
             rt: 'RT 04',
+            kk: 50,
             total: 149,
             pria: 79,
             wanita: 70,
@@ -131,6 +135,7 @@ const dashboardData = {
         },
         {
             rt: 'RT 05',
+            kk: 55,
             total: 165,
             pria: 84,
             wanita: 81,
@@ -157,6 +162,7 @@ const dashboardData = {
         },
         {
             rt: 'RT 06',
+            kk: 39,
             total: 114,
             pria: 55,
             wanita: 59,
@@ -365,7 +371,7 @@ function renderOccupationChart(containerId, data) {
         .join('');
 }
 
-/** Render kartu RT */
+/** Render kartu RT (Sudah ditambahkan Jumlah KK) */
 function renderRtCards() {
     const rtCards = document.getElementById('rt-cards');
     if (!rtCards) return;
@@ -375,9 +381,9 @@ function renderRtCards() {
             <article class="rt-card ${item.rt === dashboardData.activeRt ? 'is-active' : ''}" data-rt="${item.rt}">
                 <p class="eyebrow">Wilayah Administrasi</p>
                 <h3>${item.rt}</h3>
-                <p><strong>${item.total}</strong> jiwa</p>
-                <p>Pria: ${item.pria} • Wanita: ${item.wanita}</p>
-                <div class="rt-meta">
+                <p style="margin: 4px 0;"><strong>${item.kk}</strong> KK (Kepala Keluarga)</p>
+                <p><strong>${item.total}</strong> jiwa (Pria: ${item.pria} • Wanita: ${item.wanita})</p>
+                <div class="rt-meta" style="margin-top: 8px;">
                     <span class="pill">${item.leader}</span>
                     <span class="pill">${item.mainJobs}</span>
                 </div>
@@ -394,7 +400,7 @@ function renderRtCards() {
     });
 }
 
-/** Render detail RT yang dipilih */
+/** Render detail RT yang dipilih (Sudah ditambahkan Metrik KK) */
 function renderRtFocusSummary() {
     const summary = document.getElementById('rt-focus-summary');
     if (!summary) return;
@@ -405,6 +411,10 @@ function renderRtFocusSummary() {
         <h3>${selected.rt}</h3>
         <p>${selected.leader} • ${selected.mainJobs}</p>
         <div class="focus-grid">
+            <div class="focus-metric">
+                <span>Jumlah KK</span>
+                <strong data-target="${selected.kk}">${selected.kk}</strong>
+            </div>
             <div class="focus-metric">
                 <span>Total Jiwa</span>
                 <strong data-target="${selected.total}">${selected.total}</strong>
@@ -521,7 +531,6 @@ function setupScrollAnimations() {
                 // Trigger counter untuk angka di focus-metric
                 const numbers = entry.target.querySelectorAll('.focus-metric strong');
                 numbers.forEach(num => {
-                    // Ambil target dari atribut data-target (jika ada), jika tidak ada baru ambil dari textContent
                     const target = parseInt(num.getAttribute('data-target') || num.textContent);
                     if (!isNaN(target) && target > 0) {
                         animateNumber(num, target, 1200);
@@ -536,6 +545,7 @@ function setupScrollAnimations() {
 
     elements.forEach(el => observer.observe(el));
 }
+
 // ============================================================
 // EVENT LISTENERS GLOBAL
 // ============================================================
