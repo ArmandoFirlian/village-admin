@@ -109,28 +109,28 @@ const dashboardData = {
         {
             rt: 'RT 04',
             kk: 50,
-            total: 149,
-            pria: 79,
+            total: 150,
+            pria: 80,
             wanita: 70,
             leader: 'Ketua RT 04',
             mainJobs: 'Murjiman',
             ageCategories: [
-                { label: '0-5', value: 7 },
-                { label: '6-12', value: 16 },
+                { label: '0-5', value: 8 },
+                { label: '6-12', value: 17 },
                 { label: '13-17', value: 10 },
                 { label: '18-25', value: 12 },
-                { label: '26-45', value: 55 },
-                { label: '46-60', value: 34 },
+                { label: '26-45', value: 54 },
+                { label: '46-60', value: 30 },
                 { label: '61+', value: 20 }
             ],
             occupations: [
                 { label: 'Petani', value: 28 },
                 { label: 'Buruh', value: 4 },
                 { label: 'Pedagang', value: 29 },
-                { label: 'PNS', value: 7 },
+                { label: 'PNS', value: 2 },
                 { label: 'IRT', value: 3 },
                 { label: 'Pelajar/Mahasiswa', value: 23 },
-                { label: 'Lainnya', value: 67 }
+                { label: 'Lainnya', value: 66 }
             ]
         },
         {
