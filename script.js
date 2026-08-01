@@ -649,7 +649,7 @@ function setupModal() {
 
             const title = card.dataset.title || card.querySelector("h3")?.textContent || "";
             const category = card.dataset.category || card.querySelector(".category-label")?.textContent || "";
-            const img = card.dataset.img || card.querySelector("img")?.src || "";
+            const img = card.querySelector("img")?.src || card.dataset.img || "";
             const location = card.dataset.location || card.querySelector(".card-location")?.textContent || "";
             const desc = card.dataset.desc || card.querySelector("p")?.textContent || "";
             const waRaw = card.dataset.wa || "";
