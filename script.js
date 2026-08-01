@@ -615,13 +615,11 @@ function setupMobileMenu() {
     const navMenu = document.getElementById('navMenu');
 
     if (menuToggle && navMenu) {
-        // Event listener klik tombol hamburger
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('is-active');
             navMenu.classList.toggle('is-active');
         });
 
-        // Tutup menu otomatis saat link diklik
         navMenu.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 menuToggle.classList.remove('is-active');
@@ -629,6 +627,94 @@ function setupMobileMenu() {
             });
         });
     }
+}
+
+// ============================================================
+// MODAL DESTINASI / UMKM
+// ============================================================
+
+function setupModal() {
+    const modal = document.getElementById("detail-modal");
+    const closeBtn = document.getElementById("modal-close-btn");
+    const cards = document.querySelectorAll(".destination-card");
+    let lastFocusedElement = null;
+
+    if (!modal || cards.length === 0) return;
+
+    cards.forEach(card => {
+        card.style.cursor = "pointer";
+
+        card.addEventListener("click", () => {
+            lastFocusedElement = document.activeElement;
+
+            const title = card.dataset.title || card.querySelector("h3")?.textContent || "";
+            const category = card.dataset.category || card.querySelector(".category-label")?.textContent || "";
+            const img = card.dataset.img || card.querySelector("img")?.src || "";
+            const location = card.dataset.location || card.querySelector(".card-location")?.textContent || "";
+            const desc = card.dataset.desc || card.querySelector("p")?.textContent || "";
+            const waRaw = card.dataset.wa || "";
+
+            const modalTitle = document.getElementById("modal-title");
+            const modalCategory = document.getElementById("modal-category");
+            const modalImg = document.getElementById("modal-img");
+            const modalLocation = document.getElementById("modal-location");
+            const modalDesc = document.getElementById("modal-description");
+
+            if (modalTitle) modalTitle.textContent = title;
+            if (modalCategory) modalCategory.textContent = category;
+            if (modalImg) {
+                modalImg.src = img;
+                modalImg.alt = title;
+            }
+            if (modalLocation) modalLocation.textContent = location;
+            if (modalDesc) modalDesc.textContent = desc;
+
+            const waBtn = document.getElementById("modal-wa-btn");
+            if (waBtn) {
+                let cleanWa = waRaw.replace(/\D/g, "");
+                if (cleanWa.startsWith("0")) {
+                    cleanWa = "62" + cleanWa.slice(1);
+                }
+
+                if (cleanWa) {
+                    waBtn.href = `https://wa.me/${cleanWa}?text=Halo,%20saya%20ingin%20bertanya%20mengenai%20${encodeURIComponent(title)}`;
+                    waBtn.style.display = "inline-flex";
+                } else {
+                    waBtn.style.display = "none";
+                }
+            }
+
+            modal.classList.add("active");
+            modal.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+
+            if (closeBtn) closeBtn.focus();
+        });
+    });
+
+    const closeModal = () => {
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+
+        if (lastFocusedElement) {
+            lastFocusedElement.focus();
+        }
+    };
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", closeModal);
+    }
+
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("active")) {
+            closeModal();
+        }
+    });
 }
 
 // ============================================================
@@ -649,6 +735,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Bind interaksi map & legenda
     bindMapInteractions();
     bindLegendInteractions();
+
+    // Setup modal destinasi
+    setupModal();
 
     console.log('🚀 Sistem Informasi Padukuhan Ngentak siap!');
 });
