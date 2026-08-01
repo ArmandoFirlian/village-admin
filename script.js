@@ -119,7 +119,7 @@ const dashboardData = {
                 { label: '6-12', value: 17 },
                 { label: '13-17', value: 10 },
                 { label: '18-25', value: 12 },
-                { label: '26-45', value: 54 },
+                { label: '26-45', value: 51 },
                 { label: '46-60', value: 30 },
                 { label: '61+', value: 20 }
             ],
