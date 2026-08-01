@@ -164,26 +164,26 @@ const dashboardData = {
             rt: 'RT 06',
             kk: 39,
             total: 114,
-            pria: 55,
-            wanita: 59,
+            pria: 59,
+            wanita: 60,
             leader: 'Ketua RT 06',
             mainJobs: 'Murjiman',
             ageCategories: [
                 { label: '0-5', value: 1 },
                 { label: '6-12', value: 14 },
-                { label: '13-17', value: 7 },
+                { label: '13-17', value: 11 },
                 { label: '18-25', value: 14 },
-                { label: '26-45', value: 35 },
+                { label: '26-45', value: 357 },
                 { label: '46-60', value: 24 },
                 { label: '61+', value: 19 }
             ],
             occupations: [
                 { label: 'Petani', value: 29 },
-                { label: 'Buruh', value: 6 },
-                { label: 'Pedagang', value: 7 },
+                { label: 'Buruh', value: 7 },
+                { label: 'Pedagang', value: 9 },
                 { label: 'PNS', value: 3 },
                 { label: 'IRT', value: 8 },
-                { label: 'Pelajar/Mahasiswa', value: 17 },
+                { label: 'Pelajar/Mahasiswa', value: 19 },
                 { label: 'Lainnya', value: 40 }
             ]
         }
