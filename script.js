@@ -27,10 +27,10 @@ const dashboardData = {
     rt: [
         {
             rt: 'RT 01',
-            kk: 60,
-            total: 197,
+            kk: 65,
+            total: 198,
             pria: 99,
-            wanita: 98,
+            wanita: 99,
             leader: 'Ketua RT 01',
             mainJobs: 'Suwarjo',
             ageCategories: [
@@ -38,9 +38,9 @@ const dashboardData = {
                 { label: '6-12', value: 21 },
                 { label: '13-17', value: 14 },
                 { label: '18-25', value: 26 },
-                { label: '26-45', value: 59 },
+                { label: '26-45', value: 58 },
                 { label: '46-60', value: 51 },
-                { label: '61+', value: 19 }
+                { label: '61+', value: 21 }
             ],
             occupations: [
                 { label: 'Petani', value: 49 },
@@ -48,8 +48,8 @@ const dashboardData = {
                 { label: 'Pedagang', value: 2 },
                 { label: 'PNS', value: 3 },
                 { label: 'IRT', value: 8 },
-                { label: 'Pelajar/Mahasiswa', value: 40 },
-                { label: 'Lainnya', value: 66 }
+                { label: 'Pelajar/Mahasiswa', value: 39 },
+                { label: 'Lainnya', value: 67 }
             ]
         },
         {
