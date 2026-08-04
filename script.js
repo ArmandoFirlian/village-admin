@@ -718,6 +718,39 @@ function setupModal() {
 }
 
 // ============================================================
+// MAP PANZOOM CONTROLS
+// ============================================================
+
+function setupMapPanzoom() {
+    const mapElement = document.getElementById("map-panzoom-container");
+    const viewport = document.getElementById("mapViewport");
+
+    if (mapElement && typeof Panzoom !== "undefined") {
+        // Inisialisasi Panzoom
+        const panzoom = Panzoom(mapElement, {
+            maxScale: 5,
+            minScale: 1,
+            contain: "outside",
+            canvas: true
+        });
+
+        // Zoom menggunakan mouse wheel pada viewport
+        if (viewport) {
+            viewport.addEventListener("wheel", (e) => {
+                e.preventDefault();
+                panzoom.zoomWithWheel(e);
+            });
+        }
+
+        // Event Listener untuk Tombol Kontrol
+        document.getElementById("zoom-in")?.addEventListener("click", () => panzoom.zoomIn());
+        document.getElementById("zoom-out")?.addEventListener("click", () => panzoom.zoomOut());
+        document.getElementById("zoom-reset")?.addEventListener("click", () => panzoom.reset());
+    }
+}
+
+
+// ============================================================
 // INISIALISASI
 // ============================================================
 
@@ -735,6 +768,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Bind interaksi map & legenda
     bindMapInteractions();
     bindLegendInteractions();
+
+    // Setup Panzoom untuk Peta
+    setupMapPanzoom();
 
     // Setup modal destinasi
     setupModal();
