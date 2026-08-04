@@ -137,22 +137,32 @@
   </div>
 
   <div class="map-layout">
+    <!-- Panel Card Peta -->
     <div class="panel map-card">
-      <div class="map-card__title">
-        <span class="map-badge">Sketsa Wilayah</span>
-        <small>Representasi visual batas RT, sawah, peternakan, dan objek wisata.</small>
+      <div class="map-card__header">
+        <div>
+          <span class="map-badge">Sketsa Wilayah</span>
+          <small>Gunakan tombol, scroll, atau seret gambar untuk zoom & pan.</small>
+        </div>
+        <!-- Tombol Kontrol Zoom -->
+        <div class="map-controls">
+          <button id="zoom-in" type="button" class="btn-map-control" aria-label="Zoom In">➕</button>
+          <button id="zoom-out" type="button" class="btn-map-control" aria-label="Zoom Out">➖</button>
+          <button id="zoom-reset" type="button" class="btn-map-control" aria-label="Reset Zoom">🔄 Reset</button>
+        </div>
       </div>
 
-      <!-- WADAH PETA DENGAN PIN INTERAKTIF -->
-      <div class="map-card__image">
-        <div class="map-wrapper">
+      <!-- Wadah Peta yang Bisa Di-Zoom -->
+      <div class="map-viewport">
+        <div id="map-panzoom-container" class="map-wrapper">
           <img src="Ngentaks.jpg" alt="Peta wilayah Dusun Ngentak" class="map-image" />
         </div>
       </div>
 
-      <p class="map-image-note">Klik titik/pin pada peta untuk melihat detail lokasi.</p>
+      <p class="map-image-note">Gunakan gesture pinch (di HP) atau scroll mouse untuk memperbesar.</p>
     </div>
 
+    <!-- Panel Legenda -->
     <div class="legend-card panel">
       <h3>Legenda Peta</h3>
       <ul>
@@ -162,16 +172,15 @@
         <li class="legend-item-rt" data-rt="4"><span class="legend-dot rt-4"></span> RT 04</li>
         <li class="legend-item-rt" data-rt="5"><span class="legend-dot rt-5"></span> RT 05</li>
         <li class="legend-item-rt" data-rt="6"><span class="legend-dot rt-6"></span> RT 06</li>
-
         <li><span class="legend-dot sawah"></span> Area Sawah</li>
         <li><span class="legend-dot ternak"></span> Area Peternakan</li>
-
-        <li id="legend-umkm" data-target="#section-umkm"><span class="legend-dot umkm"></span> Sentra UMKM</li>
-        <li id="legend-pasar" data-target="#section-umkm"><span class="legend-dot pasar"></span> Pasar / Perdagangan</li>
+        <li id="legend-umkm"><span class="legend-dot umkm"></span> Sentra UMKM</li>
+        <li id="legend-pasar"><span class="legend-dot pasar"></span> Pasar / Perdagangan</li>
       </ul>
     </div>
   </div>
 </section>
+
 
 <!-- MODAL POP-UP (Letakkan di bagian bawah file index.html sebelum </body>) -->
 <div id="map-modal" class="modal-overlay" style="display: none;">
