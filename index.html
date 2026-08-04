@@ -127,45 +127,76 @@
       </article>
     </section>
 
-    <!-- Section Peta -->
-    <section class="section" id="peta">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Peta Wilayah</p>
-          <h2>Peta Dusun Ngentak</h2>
+<!-- Section Peta -->
+<section class="section" id="peta">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Peta Wilayah</p>
+      <h2>Peta Dusun Ngentak</h2>
+    </div>
+  </div>
+
+  <div class="map-layout">
+    <div class="panel map-card">
+      <div class="map-card__title">
+        <span class="map-badge">Sketsa Wilayah</span>
+        <small>Representasi visual batas RT, sawah, peternakan, dan objek wisata.</small>
+      </div>
+
+      <!-- WADAH PETA DENGAN PIN INTERAKTIF -->
+      <div class="map-card__image">
+        <div class="map-wrapper">
+          <img src="Ngentaks.jpg" alt="Peta wilayah Dusun Ngentak" class="map-image" />
+
+          <!-- Titik Pin Interaktif (Ganti top% & left% sesuai lokasi di peta kamu) -->
+          <button class="map-pin" style="top: 35%; left: 40%;" data-id="rt01" title="RT 01 Padukuhan Ngentak">
+            🏘️
+          </button>
+          <button class="map-pin" style="top: 60%; left: 55%;" data-id="umkm" title="Sentra UMKM Lokal">
+            🏪
+          </button>
+          <button class="map-pin" style="top: 80%; left: 75%;" data-id="muara" title="Wisata Muara Pandansimo">
+            🏖️
+          </button>
         </div>
       </div>
 
-      <div class="map-layout">
-        <div class="panel map-card">
-          <div class="map-card__title">
-            <span class="map-badge">Sketsa Wilayah</span>
-            <small>Representasi visual batas RT, sawah, peternakan, dan objek wisata.</small>
-          </div>
-          <div class="map-card__image">
-            <img src="Ngentaks.jpg" alt="Peta wilayah Dusun Ngentak" class="map-image" />
-          </div>
-          <p class="map-image-note">Peta wilayah Dusun Ngentak</p>
-        </div>
+      <p class="map-image-note">Klik titik/pin pada peta untuk melihat detail lokasi.</p>
+    </div>
 
-        <div class="legend-card panel">
-          <h3>Legenda Peta</h3>
-          <ul>
-            <li class="legend-item-rt" data-rt="1"><span class="legend-dot rt-1"></span> RT 01</li>
-            <li class="legend-item-rt" data-rt="2"><span class="legend-dot rt-2"></span> RT 02</li>
-            <li class="legend-item-rt" data-rt="3"><span class="legend-dot rt-3"></span> RT 03</li>
-            <li class="legend-item-rt" data-rt="4"><span class="legend-dot rt-4"></span> RT 04</li>
-            <li class="legend-item-rt" data-rt="5"><span class="legend-dot rt-5"></span> RT 05</li>
-            <li class="legend-item-rt" data-rt="6"><span class="legend-dot rt-6"></span> RT 06</li>
+    <div class="legend-card panel">
+      <h3>Legenda Peta</h3>
+      <ul>
+        <li class="legend-item-rt" data-rt="1"><span class="legend-dot rt-1"></span> RT 01</li>
+        <li class="legend-item-rt" data-rt="2"><span class="legend-dot rt-2"></span> RT 02</li>
+        <li class="legend-item-rt" data-rt="3"><span class="legend-dot rt-3"></span> RT 03</li>
+        <li class="legend-item-rt" data-rt="4"><span class="legend-dot rt-4"></span> RT 04</li>
+        <li class="legend-item-rt" data-rt="5"><span class="legend-dot rt-5"></span> RT 05</li>
+        <li class="legend-item-rt" data-rt="6"><span class="legend-dot rt-6"></span> RT 06</li>
 
-            <li><span class="legend-dot sawah"></span> Area Sawah</li>
-            <li><span class="legend-dot ternak"></span> Area Peternakan</li>
+        <li><span class="legend-dot sawah"></span> Area Sawah</li>
+        <li><span class="legend-dot ternak"></span> Area Peternakan</li>
 
-            <li id="legend-umkm" data-target="#section-umkm"><span class="legend-dot umkm"></span> Sentra UMKM</li>
-            <li id="legend-pasar" data-target="#section-umkm"><span class="legend-dot pasar"></span> Pasar / Perdagangan</li>
-          </ul>
-        </div>
-      </div>
+        <li id="legend-umkm" data-target="#section-umkm"><span class="legend-dot umkm"></span> Sentra UMKM</li>
+        <li id="legend-pasar" data-target="#section-umkm"><span class="legend-dot pasar"></span> Pasar / Perdagangan</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL POP-UP (Letakkan di bagian bawah file index.html sebelum </body>) -->
+<div id="map-modal" class="modal-overlay" style="display: none;">
+  <div class="modal-content">
+    <button class="modal-close" id="closeMapModal" aria-label="Tutup">&times;</button>
+    <img id="mapModalImg" src="" alt="Detail Lokasi" class="modal-image" />
+    <div class="modal-body">
+      <span id="mapModalBadge" class="eyebrow-badge">Kategori</span>
+      <h3 id="mapModalTitle" style="margin: 8px 0; color: #1d6f3c;">Nama Lokasi</h3>
+      <p id="mapModalSub" style="color: #666; font-size: 13px; margin-bottom: 12px;">📍 Alamat / Subtitle</p>
+      <p id="mapModalDesc" style="font-size: 14px; color: #333; line-height: 1.5;">Deskripsi detail...</p>
+    </div>
+  </div>
+</div>
     </section>
 
     <!-- Section Penduduk -->
