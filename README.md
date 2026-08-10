@@ -365,9 +365,37 @@ Penggunaan, pengembangan, dan distribusi ulang kode dapat disesuaikan dengan keb
 
 ---
 
-## 👨‍💻 Pengembang
+## 🤝 Kontribusi
 
-**Armando Firlian**
+Pengembangan website dan penyusunan data kependudukan melibatkan beberapa pihak dengan peran yang berbeda.
+
+### 👨‍💻 Pengembang Sistem
+
+- **Armando Firlian** — Pengembangan dan implementasi sistem, pengolahan data, desain antarmuka, serta deployment website.
+
+### 📋 Tim Pengumpulan Data Kependudukan
+
+Tim KKN berkontribusi dalam proses pengumpulan dan verifikasi data kependudukan Padukuhan Ngentak. 
+Setiap wilayah RT didampingi oleh dua anggota yang bertugas melakukan pendataan di lapangan.
+
+| No. | Wilayah | Anggota 1 | Anggota 2 | Kontribusi |
+|---:|---|---|---|---|
+| 1 | **RT 01** | Paulus Anggoro Jatiwaluyo | Dina Ramadhani | Pengumpulan & verifikasi data kependudukan |
+| 2 | **RT 02** | Muhammad Fahim Abiahsan | Alya Ayu Lestari | Pengumpulan & verifikasi data kependudukan |
+| 3 | **RT 03** | Nglamul Huda | Ananda Putri Novitasari | Pengumpulan & verifikasi data kependudukan |
+| 4 | **RT 04** | Armando Firlian Ihza Yulianto | Astyawati Azzahra | Pengumpulan & verifikasi data kependudukan |
+| 5 | **RT 05** | Maulana Iqbal | Alya Khoirunisa | Pengumpulan & verifikasi data kependudukan |
+| 6 | **RT 06** | Bisma Wijaya Ismail | Nur Aisyah Kusmawati | Pengumpulan & verifikasi data kependudukan |
+
+### 📝 Tugas Tim Pendataan
+
+Setiap anggota yang bertugas pada masing-masing RT berkontribusi dalam:
+
+- Melakukan pendataan kependudukan di wilayah RT masing-masing.
+- Mengumpulkan informasi berdasarkan dokumen administrasi yang tersedia.
+- Melakukan pengecekan dan verifikasi data.
+- Berkoordinasi dengan ketua RT dan warga setempat.
+- Memastikan data yang dikumpulkan lengkap sebelum diserahkan untuk proses pengolahan.
 
 
 Repository:
